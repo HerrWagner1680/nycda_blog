@@ -1,26 +1,26 @@
 class UsersController < ApplicationController
   def index
-    @user = User.all
+    @user = Users.all
   end
 
   def create
   end
 
   def new
-    @user = User.new
+    @user = Users.new
   end
 
   def edit
-    @user = User.find(params[:id])
+    @user = Users.find(params[:id])
   end
 
   def show
     current_user
-    @user = User.find(params[:id])
+    @user = Users.find(params[:id])
   end
 
   def update
-      @user = User.find(params[:id])
+      @user = Users.find(params[:id])
 
     if @user.update(user_params)
       flash[:notice] = "You have successfully updated your information"
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = User.find(params[:id])
+    @user = Users.find(params[:id])
     @user.destroy
   end
 end
