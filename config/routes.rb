@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root "users#new"
+
   resources :comments
   resources :posts
   resources :users

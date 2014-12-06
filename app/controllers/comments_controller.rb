@@ -31,3 +31,4 @@ class CommentsController < ApplicationController
     redirect_to "/posts"
   end
 end
+end
