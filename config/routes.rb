@@ -3,11 +3,11 @@ Rails.application.routes.draw do
 
   root "sessions#new"
 
- resources :community
   get "/users/contact" => "users#contact"
   get "/users/staff" => "users#staff"
   get "/users/students" => "users#students"
 
+  resources :communities
   resources :comments
   resources :posts
   resources :users

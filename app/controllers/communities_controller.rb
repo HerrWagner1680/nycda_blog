@@ -1,6 +1,7 @@
-class CommunityController < ApplicationController
+class CommunitiesController < ApplicationController
  def index
     @communities = Community.all
+    @comment = Comment.new
   end
 
   def create
@@ -11,7 +12,7 @@ class CommunityController < ApplicationController
     else
       flash[:alert] = "ERROR POST NOT CREATED"
     end
-    redirect_to "/community/index"
+    redirect_to "/community"
   end
 
   def new

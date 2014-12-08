@@ -49,18 +49,12 @@ class UsersController < ApplicationController
     @user.destroy
   end
 
-  def community_create
-    @post = Post.new(post_params)
-    if @post.save
-      @post.user_id = session[:user_id]
-      flash[:notice] = "Post Created"
-    else
-      flash[:alert] = "ERROR POST NOT CREATED"
-    end
-    redirect_to "/posts"
+  def staff
+    @user = User.order(:lname).reverse
   end
 
-  def community_new
+  def students
+    @user = User.order(:lname).reverse
   end
 
 private

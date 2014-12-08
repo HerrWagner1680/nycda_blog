@@ -1,3 +1,15 @@
 <h1>STAFF</h1>
 <h3>lists staff currently teaching</h3>
 <h5>file located users/staff.html.erb</h5>
+
+<% if @user %>
+	<ul>
+		<% @user.reverse.each do |staff| %>
+			<li>
+			<%= staff.fname %>
+			<%= staff.lname %>
+			<h3> must be fixed, CURRENTLY LISTING ALL USERS </h3>
+			</li>
+		<% end %>
+	</ul>
+<% end %>
