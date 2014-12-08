@@ -1,2 +1,18 @@
 <h1>Posts#new</h1>
 <p>Find me in app/views/posts/new.html.erb</p>
+
+<h1>CREATE A NEW BLOG POST</h1>
+
+<%= form_for @post do |f| %>
+<%= f.text_field :title, placeholder: "Title Of Post" %>
+<%= f.text_field :text, placeholder: "Enter Blog Post Here ..." %>
+<%= f.submit %>
+
+<h2>------Insert form-------</h2>
+<h2>Title of post</h2>
+<h2>Text</h2>
+<h2>----------------------</h2>
+<h2>submit button</h2>
+
+<h3>acts as a kind of pop-up screen on</h3>
+<h3>users#index page</h3>

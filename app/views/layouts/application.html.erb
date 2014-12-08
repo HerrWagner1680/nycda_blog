@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NycdaBlog</title>
+  <title>NYC+DA Student</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<nav>
+	<ul>
+		<li><a href ="#">HOME</a></li>
+		<li><a href ="#">COMMUNITY</a></li>
+		<li><a href ="#">PROFILE</a></li>
+		<li><a href ="#">CONTACT</a></li>
+		<li><a href ="#">STUDENTS</a></li>
+		<li><a href ="#">STAFF</a></li>
+		<li><a href ="#">HELP</a></li>
+		<li><h5>NOTE: menu stored in layouts/application.html.erb</h5></li>
+	</ul>
+</nav>
+
 
 <%= yield %>
 

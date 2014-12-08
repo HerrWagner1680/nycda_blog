@@ -1,10 +1,10 @@
 class CommentsController < ApplicationController
   def index
-    @comments = Comments.all
+    @comments = Comment.all
   end
 
   def create
-      @comment = Comments.new(comment_params)
+      @comment = Comment.new(comment_params)
       @comment.user_id = session[:user_id]
     if @comment.save
       flash[:notice] = "Comment was created"
@@ -15,18 +15,17 @@ class CommentsController < ApplicationController
   end
 
   def new
-    @comment = Comments.new
+    @comment = Comment.new
   end
 
 
-
   def show
-    @comment = Comments.find(params[:id])
+    @comment = Comment.find(params[:id])
   end
 
 
   def destroy
-    @comment = Comments.find(params[:id])
+    @comment = Comment.find(params[:id])
     @comment.destroy
     redirect_to "/posts"
   end

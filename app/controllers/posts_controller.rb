@@ -49,4 +49,10 @@ class PostsController < ApplicationController
     end
     redirect_to "/posts"
   end
+
+private
+
+  def params_post
+    params.require
+
 end
