@@ -4,7 +4,7 @@ class CommunityController < ApplicationController
   end
 
   def create
-      @community = Community.new(post_params)
+      @community = Community.new(community_params)
     if @community.save
       @community.user_id = session[:user_id]
       flash[:notice] = "Post Created"
@@ -50,8 +50,8 @@ class CommunityController < ApplicationController
 
 private
 
-  def post_params
-    params.require(:post).permit(:title, :text)
+  def community_params
+    params.require(:community).permit(:title, :text)
   end
 end
 
