@@ -49,10 +49,24 @@ class UsersController < ApplicationController
     @user.destroy
   end
 
+  def community_create
+    @post = Post.new(post_params)
+    if @post.save
+      @post.user_id = session[:user_id]
+      flash[:notice] = "Post Created"
+    else
+      flash[:alert] = "ERROR POST NOT CREATED"
+    end
+    redirect_to "/posts"
+  end
+
+  def community_new
+  end
+
 private
 
   def user_params
-    params.require(:user).permit(:email,:password,:fname,:lname)
+    params.require(:user).permit(:email,:password,:fname,:lname, :avatar)
   end
 
 end

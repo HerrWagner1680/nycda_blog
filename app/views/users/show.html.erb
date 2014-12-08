@@ -6,7 +6,10 @@
 <h2> PICTURE </h2>
 
 <%= "#{@user.fname} #{@user.lname}" %>'s Profile
-<%= @user.email %>
+EMAIL: <%= @user.email %>
+
+<%= image_tag @user.avatar.url(:thumb) %>
+
 
 name
 email

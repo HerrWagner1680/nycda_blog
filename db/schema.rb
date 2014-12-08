@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141206185922) do
+ActiveRecord::Schema.define(version: 20141208200657) do
 
   create_table "comments", force: true do |t|
     t.integer  "post_id"
+    t.string   "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "communities", force: true do |t|
+    t.string   "title"
     t.string   "text"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -38,6 +45,10 @@ ActiveRecord::Schema.define(version: 20141206185922) do
     t.string   "user_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
 end

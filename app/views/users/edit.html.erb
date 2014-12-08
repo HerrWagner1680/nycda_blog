@@ -5,3 +5,15 @@
 
 <h2> bottom of the page has images of followers </h2>
 <h2> images courtesy of PAPERCLIP GEM </h2>
+
+<h2>EDIT Here!!</h2>
+
+<%= form_for @user,
+			:html => { :multipart => true } do |f| %>
+  <%= f.text_field :fname, placeholder: "First Name" %>
+  <%= f.text_field :lname, placeholder: "Last Name" %>
+  <%= f.email_field :email, placeholder: "Email" %>
+  <%= f.password_field :password, placeholder: "Password" %>
+  <%= f.file_field :avatar %>
+  <%= f.submit %>
+<% end %>

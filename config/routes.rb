@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
+
   root "sessions#new"
 
+ resources :community
   get "/users/contact" => "users#contact"
-  get "/users/community" => "users#community"
   get "/users/staff" => "users#staff"
   get "/users/students" => "users#students"
 
