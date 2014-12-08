@@ -8,20 +8,24 @@
 </head>
 <body>
 
+<%= flash[:notice] if flash[:notice] %>
+<%= flash[:alert] if flash[:alert] %>
+
+<% if current_user %>
 <nav>
 	<ul>
-		<% if @current_user %>
-		<li><a href ="#">HOME</a></li>
+		<li><a href ="/users">HOME</a></li>
 		<li><a href ="#">COMMUNITY</a></li>
-		<li><a href ="#">PROFILE</a></li>
+		<li><a href ="/users/<%= current_user.id %>">PROFILE</a></li>
 		<li><a href ="#">CONTACT</a></li>
 		<li><a href ="#">STUDENTS</a></li>
 		<li><a href ="#">STAFF</a></li>
 		<li><a href ="#">HELP</a></li>
 		<li><h5>NOTE: menu stored in layouts/application.html.erb</h5></li>
-		<% end %>
 	</ul>
 </nav>
+<%= link_to ("LOGOUT"), "/sessions",method: :delete %>
+<% end %>
 
 
 <%= yield %>

@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     if @user && @user.password == params[:password]
       session[:user_id] = @user.id
       flash[:notice] = "You are now logged in"
-      redirect_to "/users/#{ @user.id }"
+      redirect_to "/users"
     else
       flash[:alert] = ["Incorrect values"]
       redirect_to "/sessions/new"
