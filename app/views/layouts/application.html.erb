@@ -12,6 +12,7 @@
 <%= flash[:alert] if flash[:alert] %>
 
 <% if current_user %>
+<div id="menu">
 <nav>
 	<ul>
 		<li><a href ="/users">HOME</a></li>
@@ -24,6 +25,7 @@
 		<li><h5>NOTE: menu stored in layouts/application.html.erb</h5></li>
 	</ul>
 </nav>
+</div>
 <%= link_to ("LOGOUT"), "/sessions",method: :delete %>
 <%= link_to ("CREATE A BLOG POST"), "/posts/new",method: :get %>
 <% end %>

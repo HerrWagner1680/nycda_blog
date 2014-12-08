@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+#menu {
+	float: left;
+	display: inline-block;
+	width: 200px;
+	height: 100%;
+	border-radius: 10px;
+}
+
+#menu ul {
+	list-style-type: none;
+}
+
+#menu ul li {
+	padding-bottom: 20px;
+	text-decoration: none;
+}
+
+#menu ul li a {
+	text-decoration: none;
+	padding: .2em 1em;
+	color: #fff;
+	background-color: #369;
+	border-radius: 10px;
+}
