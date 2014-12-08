@@ -2,10 +2,15 @@ Rails.application.routes.draw do
 
   root "sessions#new"
 
+  get "/users/contact" => "users#contact"
+  get "/users/community" => "users#community"
+  get "/users/staff" => "users#staff"
+  get "/users/students" => "users#students"
+
   resources :comments
   resources :posts
   resources :users
-  resources :sessions
+  resources :sessions, only: [:new, :create, :destroy]
 
   delete "/sessions" => "sessions#destroy"
 

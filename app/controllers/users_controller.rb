@@ -25,8 +25,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    current_user
     @user = User.find(params[:id])
+  end
+
+  def contact
+    User
   end
 
   def update
