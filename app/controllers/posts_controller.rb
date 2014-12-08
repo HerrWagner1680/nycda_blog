@@ -4,15 +4,13 @@ class PostsController < ApplicationController
   end
 
   def create
-      @post = Post.new(title: params[:post][:title],
-                     text: params[:post][:text],
-                     user_id: session[:user_id])
+      @post = Post.new(post_params)
     if @post.save
+      @post.user_id = session[:user_id]
       flash[:notice] = "Post Created"
     else
       flash[:alert] = "ERROR POST NOT CREATED"
     end
-
     redirect_to "/posts"
   end
 
@@ -21,7 +19,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id]
+    @post = Post.find(params[:id])
   end
 
   def show
@@ -52,7 +50,7 @@ class PostsController < ApplicationController
 
 private
 
-  def params_post
-    params.require
-
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
 end
