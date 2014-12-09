@@ -22,6 +22,10 @@ body {
 	height: 100%;
 }
 
+button {
+	float: right;
+}
+
 #menu {
 	float: left;
 	display: inline-block;
@@ -48,6 +52,7 @@ body {
 }
 
 .grayzone {
+	display: none;
 	height: 100%;
 	width: 100%;
 	background-color: red;
@@ -57,5 +62,7 @@ body {
 	width: 500px;
 	height: 500px;
 	background-color: white;
+	margin: 0 auto;
+	opacity: 0.5;
 }
 
