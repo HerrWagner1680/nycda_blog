@@ -15,5 +15,15 @@
 	</ul>
 <% end %>
 
+<% if @comments %>
+	<ul>
+		<% @comments.reverse.each do |comment| %>
+			<li>
+			<%= comment.text %>
+			</li>
+		<% end %>
+	</ul>
+<% end %>
+
 <h3>render create new comment box</h3>
 <%= render "comments/new" %>

@@ -1,22 +1,23 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
-    @post_new = Post.new
+    @post = Post.new
   end
 
   def create
-      @post = Post.new(post_params)
+    @post = Post.new(post_params)
+    @post.user_id = current_user.id
     if @post.save
-      @post.user_id = session[:user_id]
       flash[:notice] = "Post Created"
     else
-      flash[:alert] = "ERROR POST NOT CREATED"
+      flash[:alert] = @post.errors.full_messages
     end
     redirect_to "/posts"
   end
 
   def new
     @post = Post.new
+    @post_new = Post.new
   end
 
   def edit

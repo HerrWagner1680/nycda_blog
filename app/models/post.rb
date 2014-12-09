@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-	validates :title, :post, presence: true
+	validates :title, :text, :user_id, presence: true
 
 	has_many :comments
 	belongs_to :user

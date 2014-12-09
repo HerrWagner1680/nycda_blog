@@ -2,7 +2,8 @@ class CommunitiesController < ApplicationController
  def index
     @communities = Community.all
     @comment = Comment.new
-    @post_new = Post.new
+    @post = Post.new
+    @comments = Comment.all
   end
 
   def create

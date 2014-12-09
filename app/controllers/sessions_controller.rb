@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
   end
 
   def new
+    @post = Post.new
   end
 
   def destroy
