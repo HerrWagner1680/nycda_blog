@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   def create
     @user = User.where(email: params[:email]).first
 
-    if @user && @user.password == params[:password_digest]
+    if @user && @user.password_digest == params[:password_digest]
       session[:user_id] = @user.id
       flash[:notice] = "You are now logged in"
       redirect_to "/users"
