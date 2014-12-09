@@ -46,3 +46,16 @@ body {
 	background-color: #369;
 	border-radius: 10px;
 }
+
+.grayzone {
+	height: 100%;
+	width: 100%;
+	background-color: red;
+}
+
+.modal {
+	width: 500px;
+	height: 500px;
+	background-color: white;
+}
+

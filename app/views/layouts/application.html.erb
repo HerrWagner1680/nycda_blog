@@ -12,11 +12,18 @@
 <%= flash[:alert] if flash[:alert] %>
 
 <% if current_user %>
+
+<button>CLICK TO CREATE POST</button>
+<div class="grayzone">
+	<div class="modal">
+	HELLO!!!!
+	</div>
+</div>
 <div id="menu">
 <nav>
 	<ul>
 		<li><a href ="/users">HOME</a></li>
-		<li><a href ="/community">COMMUNITY</a></li>
+		<li><a href ="/communities">COMMUNITY</a></li>
 		<li><a href ="/users/<%= current_user.id %>">PROFILE</a></li>
 		<li><a href ="/users/contact">CONTACT</a></li>
 		<li><a href ="/users/students">STUDENTS</a></li>
@@ -32,6 +39,8 @@
 
 
 <%= yield %>
+
+
 
 </body>
 </html>

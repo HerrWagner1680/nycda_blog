@@ -14,8 +14,8 @@
   <%= f.select :staff_or_student, [['student', 'student'], ['staff', 'staff']]  %>
   <br>
   <%= f.email_field :email, placeholder: "Email" %>
-  <%= f.password_field :password, placeholder: "Password" %>
-  <%= f.password_field :password_confirmation, placeholder: "Validate Password" %>
+  <%= f.password_field :password_digest, placeholder: "Password" %>
+  <%= f.password_field :password_digest_confirmation, placeholder: "Validate Password" %>
   <%= f.file_field :avatar %>
   <%= f.submit "Create Student" %>
 <% end %>
