@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def index
     @user = User.all
     @posts = Post.all
+    @post_new = Post.new
   end
 
   def create
@@ -26,10 +27,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @post_new = Post.new
   end
 
   def contact
-    User
+    @post_new = Post.new
   end
 
   def update
@@ -50,10 +52,12 @@ class UsersController < ApplicationController
 
   def staff
     @user = User.order(:lname).reverse
+    @post_new = Post.new
   end
 
   def students
     @user = User.order(:lname).reverse
+    @post_new = Post.new
   end
 
 private

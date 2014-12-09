@@ -3,7 +3,7 @@
 
 <h1>CREATE A NEW BLOG POST</h1>
 
-<%= form_for @post do |f| %>
+<%= form_for @post_new do |f| %>
 <%= f.text_field :title, placeholder: "Title Of Post" %>
 <%= f.text_field :text, placeholder: "Enter Blog Post Here ..." %>
 <%= f.submit %>
@@ -15,7 +15,4 @@
 
 
 
-<%= link_to 'Add release', new_post,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
-
-<div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
  

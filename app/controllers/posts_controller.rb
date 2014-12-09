@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
+    @post_new = Post.new
   end
 
   def create
@@ -16,7 +17,6 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    end
   end
 
   def edit
@@ -26,6 +26,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @current_user = User.find(session[:user_id])
+    @post_new = Post.new
   end
 
   def update

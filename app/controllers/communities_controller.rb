@@ -2,6 +2,7 @@ class CommunitiesController < ApplicationController
  def index
     @communities = Community.all
     @comment = Comment.new
+    @post_new = Post.new
   end
 
   def create
@@ -26,6 +27,7 @@ class CommunitiesController < ApplicationController
   def show
     @community = Community.find(params[:id])
     @current_user = User.find(session[:user_id])
+    @post_new = Post.new
   end
 
   def update

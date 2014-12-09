@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   def index
     @comment = Comment.all
+    @post_new = Post.new
   end
 
   def create
@@ -23,6 +24,7 @@ class CommentsController < ApplicationController
 
   def show
     @comment = Comment.find(params[:id])
+    @post_new = Post.new
   end
 
 

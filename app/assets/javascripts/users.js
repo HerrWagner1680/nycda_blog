@@ -34,8 +34,8 @@ $(window).bind('keydown', function(event) {
     }
 });
 
-$("button").on('click',function(){ $(".grayzone").show()});
-$(".grayzone").on('click',function(){ $(".grayzone").hide()});
-
+ // $("button").on('click',function(){ $(".grayzone").show()});
+ // $(".grayzone").on('click',function(){ $(".grayzone").hide()});
+ // // $( "button" ).on('click',function(){ $(".grayzone").toggle( showOrHide )};
 
 });

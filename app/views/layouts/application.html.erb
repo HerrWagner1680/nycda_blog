@@ -11,14 +11,21 @@
 <%= flash[:notice] if flash[:notice] %>
 <%= flash[:alert] if flash[:alert] %>
 
+
 <% if current_user %>
 
 <button>CLICK TO CREATE POST</button>
-<div class="grayzone">
+<div class="grayzone hidden">
 	<div class="modal">
 	HELLO!!!!
 	<br>
 	click anywhere on screen to hide modal
+<br>
+
+<h3>render posts#new </h3>
+<%= render "posts/new" %>
+<h1>CREATE A NEW BLOG POST</h1>
+
 	</div>
 </div>
 <div id="menu">
@@ -41,6 +48,14 @@
 
 
 <%= yield %>
+
+
+<script>
+$(function(){
+  $("button").on('click',function(){$(".grayzone").removeClass("hidden")});
+  $(".grayzone").on('click',function(){ $(".grayzone").addClass("hidden")});
+});
+</script>
 
 
 
