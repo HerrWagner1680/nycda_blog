@@ -8,8 +8,11 @@
 <%= "#{@user.fname} #{@user.lname}" %>'s Profile
 EMAIL: <%= @user.email %>
 
+<% if @user.avatar.present? %>
 <%= image_tag @user.avatar.url(:thumb) %>
-
+<% else %>
+<h4>Missing Pic</h4>
+<% end %>
 
 name
 email

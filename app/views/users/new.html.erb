@@ -11,8 +11,11 @@
   <%= f.text_field :fname, placeholder: "First Name" %>
   <%= f.text_field :lname, placeholder: "Last Name" %>
   <br>
+  <%= f.select :staff_or_student, [['student', 'student'], ['staff', 'staff']]  %>
+  <br>
   <%= f.email_field :email, placeholder: "Email" %>
   <%= f.password_field :password, placeholder: "Password" %>
+  <%= f.password_field :password_confirmation, placeholder: "Validate Password" %>
   <%= f.file_field :avatar %>
   <%= f.submit "Create Student" %>
 <% end %>
