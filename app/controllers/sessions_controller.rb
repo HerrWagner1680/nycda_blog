@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
 
     if @user && @user.password_digest == params[:password_digest]
       session[:user_id] = @user.id
+      cookies[:user_id] = @user.id
       flash[:notice] = "You are now logged in"
       redirect_to "/users"
     else
