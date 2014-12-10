@@ -1,5 +1,61 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>NYC+DA Student</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+    <%= flash[:notice] if flash[:notice] %>
+    <%= flash[:alert] if flash[:alert] %>
+
+     <header>
+        <div class="banner">
+        </div>
+        <% if current_user %>
+            <!-- <div class="logout"> -->
+            <div class="loginout">
+              <%= link_to ("LOGOUT"), "/sessions",method: :delete %>
+            </div>
+            <!-- </div> -->
+            <%= link_to ("CREATE A COMMUNITY POST"), "/communities/new",method: :get %>
+            <button class="create_post">CLICK TO CREATE BLOG POST</button>
+            <div class="grayzone hidden">
+              <div class="modal">
+              <%= render "posts/new" %>
+              </div>
+            </div>
+    </header>
+
+    <main class="clearfix">
+      <nav>
+         <ul>
+      		<li><a href ="/users">HOME</a></li>
+      		<li><a href ="/communities">COMMUNITY</a></li>
+      		<li><a href ="/users/<%= current_user.id %>">PROFILE</a></li>
+      		<li><a href ="/users/contact">CONTACT</a></li>
+      		<li><a href ="/users/students">STUDENTS</a></li>
+      		<li><a href ="/users/staff">STAFF</a></li>
+      		<li><a href ="/users/contact#help">HELP</a></li>
+      	 </ul>
+      </nav> 
+      <section>
+      <%= yield %>
+      </section>  
+    </main>
+
+    <footer>
+      <span style="font-size: 9px">
+        <a href="privacy-policy">TERMS OF USE</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="privacy-policy">PRIVACY POLICY</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;©2014 AKZ &amp; Video, LLC. All Rights Reserved
+      </span>
+    </footer>
+
+ <div id="footer">
 <head>
   <title>NYC+DA Student</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -67,6 +123,7 @@ $(function(){
 
 
 </script>
+
 
 
 
