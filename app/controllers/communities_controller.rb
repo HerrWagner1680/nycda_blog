@@ -14,7 +14,7 @@ class CommunitiesController < ApplicationController
     else
       flash[:alert] = "ERROR POST NOT CREATED"
     end
-    redirect_to "/community"
+    redirect_to "/communities"
   end
 
   def new

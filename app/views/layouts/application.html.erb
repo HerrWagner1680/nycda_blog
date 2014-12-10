@@ -55,14 +55,16 @@ $(function(){
 });
 
 $(function(){
-  $(".create_comment").on('click',function(){$(".comment").removeClass("hidden")});
+  $(".create_comment").on('click',function(){$(this).parent().children(".comment").removeClass("hidden")});
  $(".close_comment").on('click',function(){ $(".comment").addClass("hidden")});
 });
 
-$(function(){
-  $(".create_blog_comment").on('click',function(){$(".blog_comment").removeClass("hidden")});
- $(".close_blog_comment").on('click',function(){ $(".blog_comment").addClass("hidden")});
-});
+ $(function(){
+  $(".create_blog_comment").on('click', function(){ $(this).parent().children(".blog_comment").removeClass("hidden") })
+
+  $(".close_blog_comment").on('click',function(){ $(".blog_comment").addClass("hidden")});
+ });
+
 
 </script>
 

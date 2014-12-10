@@ -28,7 +28,7 @@ button {
 
 #menu {
 	float: left;
-	display: inline-block;
+	display: inline-block2;
 	width: 200px;
 	height: 100%;
 	border-radius: 10px;
@@ -72,6 +72,7 @@ button {
 }
 
 .hidden {
-	visibility: hidden;
+/*	visibility: hidden;*/
+	display: none;
 }
 

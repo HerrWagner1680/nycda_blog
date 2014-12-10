@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     @posts = Post.all
     @post = Post.new
     @comment = Comment.new
+    @comments = Comment.all
   end
 
   def create
