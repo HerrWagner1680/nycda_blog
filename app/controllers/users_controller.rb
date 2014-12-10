@@ -52,13 +52,13 @@ class UsersController < ApplicationController
   end
 
   def staff
-    @user = User.order(:lname).reverse
-    @post_new = Post.new
+    @staff = User.all.where(staff_or_student: "staff")
+    @user = @staff.order(:lname).reverse
   end
 
   def students
-    @user = User.order(:lname).reverse
-    @post_new = Post.new
+    @student = User.all.where(staff_or_student: "student")
+    @user = @student.order(:lname).reverse
   end
 
 private
