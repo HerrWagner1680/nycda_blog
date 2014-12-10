@@ -51,10 +51,14 @@
 <script>
 $(function(){
   $(".create_post").on('click',function(){$(".grayzone").removeClass("hidden")});
-  // $(".grayzone").on('click',function(){ $(".grayzone").addClass("hidden")});
  $(".close").on('click',function(){ $(".grayzone").addClass("hidden")});
-
 });
+
+$(function(){
+  $(".create_comment").on('click',function(){$(".comment").removeClass("hidden")});
+ $(".close_comment").on('click',function(){ $(".comment").addClass("hidden")});
+});
+
 </script>
 
 
