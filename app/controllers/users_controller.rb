@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
+      cookies[:user_id] = @user.id
       flash[:notice] = "Successfully Registered"
       redirect_to "/users/#{ @user.id }"
     else
