@@ -6,7 +6,8 @@ $(document).ready(function() {
 $(window).bind('keydown', function(event) {
     if (event.ctrlKey || event.metaKey) {
         switch (String.fromCharCode(event.which).toLowerCase()) {
-        case 'h':
+      
+		case 'h':
             event.preventDefault();
             window.location.href = "/users";
             break;
@@ -32,6 +33,7 @@ $(window).bind('keydown', function(event) {
             break;
         case 'l':
             // event.preventDefault();
+
 
 			$.ajax({
 			  type: "DELETE",
