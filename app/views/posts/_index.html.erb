@@ -7,7 +7,16 @@
 			<li>
 			<%= post.title %>
 			<%= post.text %>
-			<a href ="#">COMMENT</a>
+			<%= post.id %>
+			<a href ="#" data-id=<%= "#{post.id}"%> class="create_blog_comment">ADD NEW COMMENT</a>
+			<div class="blog_comment hidden">
+			<%= render "comments/new", :community_id => nil ,
+				:post_id => post.id  %>
+			</div>
+			<% x = @comments.where(post_id: post.id) %>
+				<% x.each do |zzz| %>
+				<h5> >>>> <%= zzz.text %> </h5>
+				<% end %>
 			</li>
 		<% end %>
 	</ul>

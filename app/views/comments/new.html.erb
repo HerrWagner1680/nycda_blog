@@ -1,9 +1,9 @@
-<h1>Comments#new</h1>
-<p>Find me in app/views/comments/new.html.erb</p>
-
+<button class="close_comment close_blog_comment">CLOSE COMMENT BOX</button>
 <h1>CREATE A NEW COMMENT</h1>
 
 <%= form_for @comment do |f| %>
+<%= f.hidden_field :post_id, value: post_id %>
+<%= f.hidden_field :community_id, value: community_id %>
 <%= f.text_field :text, placeholder: "Enter Comment Here ..." %>
 <%= f.submit %>
 <% end %>

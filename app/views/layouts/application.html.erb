@@ -55,44 +55,76 @@
       </span>
     </footer>
 
-    <!-- <div id="footer">
+ <div id="footer">
+<head>
+  <title>NYC+DA Student</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-  </div>
-  <div class="socialmedia">
-  <div class="facebook">
-    <a href="facebook.com"</a><img src="https://www.facebook.com/images/fb_icon_325x325.png" style="width:3em; height:3em;" class="soc-icon soc-fb">
-    </a>
-    <a href="facebook.com"</a><img src="http://latestlaptop.biz/wp-content/uploads/2014/09/instagram-logo-vector-png.jpg" style="width:3em; height:3em;" class="soc-icon soc-fb">
-    </a>
-    <a href="facebook.com"</a><img src="http://www.gambarphoto.com/wp-content/uploads/2014/06/whatsapp-logo-vectorinstagram-logo-vector---eps---free-graphics-download-gsdepdju.png" style="width:3em; height:3em;" class="soc-icon soc-fb">
-    </a>
-  </div>
-  </div>
-  <div class="terms2">
-    0908&ndash;510&ndash;8271&nbsp;| <a href="mailto:yAkz@hotty.com?subject=Work%20 opportunity&body=Dear%20Steven">yamatailor@hotmail.com</a>
-  </div>  
-  <div class="terms">
-    <span style="font-size: 9px">
-      <a href="privacy-policy">TERMS OF USE</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="privacy-policy">PRIVACY POLICY</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;©2014 AKZ &amp; Video, LLC. All Rights Reserved
-    </span>
-  </div>
-  </div> -->
-       
-        <% end %>
+<%= flash[:notice] if flash[:notice] %>
+<%= flash[:alert] if flash[:alert] %>
 
 
-      
+<% if current_user %>
 
-      <script>
-        $(function(){
-          $(".create_post").on('click',function(){$(".grayzone").removeClass("hidden")});
-  // $(".grayzone").on('click',function(){ $(".grayzone").addClass("hidden")});
-          $(".close").on('click',function(){ $(".grayzone").addClass("hidden")});
-          });
-      </script>
+<button class="create_post">CLICK TO CREATE BLOG POST</button>
+<div class="grayzone hidden">
+	<div class="modal">
+
+	<br>
+<h5>other modal info in layouts/application/html.erb</h5>
+<h3>render posts#new </h3>
+<%= render "posts/new" %>
+<h1>CREATE A NEW BLOG POST</h1>
+
+	</div>
+</div>
+<div id="menu">
+<nav>
+	<ul>
+		<li><a href ="/users">HOME</a></li>
+		<li><a href ="/communities">COMMUNITY</a></li>
+		<li><a href ="/users/<%= current_user.id %>">PROFILE</a></li>
+		<li><a href ="/users/contact">CONTACT</a></li>
+		<li><a href ="/users/students">STUDENTS</a></li>
+		<li><a href ="/users/staff">STAFF</a></li>
+		<li><a href ="/users/contact#help">HELP</a></li>
+		<li><h5>NOTE: menu stored in layouts/application.html.erb</h5></li>
+	</ul>
+</nav>
+</div>
+<%= link_to ("LOGOUT"), "/sessions",method: :delete %>
+<%= link_to ("CREATE A COMMUNITY POST"), "/communities/new",method: :get %>
+<% end %>
+
+
+<%= yield %>
+
+
+<script>
+$(function(){
+  $(".create_post").on('click',function(){$(".grayzone").removeClass("hidden")});
+ $(".close").on('click',function(){ $(".grayzone").addClass("hidden")});
+});
+
+$(function(){
+  $(".create_comment").on('click',function(){$(this).parent().children(".comment").removeClass("hidden")});
+ $(".close_comment").on('click',function(){ $(".comment").addClass("hidden")});
+});
+
+ $(function(){
+  $(".create_blog_comment").on('click', function(){ $(this).parent().children(".blog_comment").removeClass("hidden") })
+
+  $(".close_blog_comment").on('click',function(){ $(".blog_comment").addClass("hidden")});
+ });
+
+
+</script>
+
+
 
 
 </body>
