@@ -30,17 +30,17 @@ $(window).bind('keydown', function(event) {
             event.preventDefault();
             window.location.href = "/users/staff";
             break;
-   //      case 'l':
-   //          // event.preventDefault();
+        case 'l':
+            // event.preventDefault();
 
-			// $.ajax({
-			//   type: "DELETE",
-			//   url: "/sessions",
-			// })
-			//   .complete(function( ) {
-			//     alert( "Successfully Logged Out" );
-			//   });
-			//   break;
+			$.ajax({
+			  type: "DELETE",
+			  url: "/sessions",
+			})
+			  .complete(function( ) {
+			    alert( "Successfully Logged Out" );
+			  });
+			  break;
 			 
         }
     }

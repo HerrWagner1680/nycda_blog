@@ -57,7 +57,7 @@ button {
 .grayzone {
 	height: 100%;
 	width: 100%;
-	background-color: red;
+	background-color: rgba(0,0,0,0.6);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -68,7 +68,7 @@ button {
 	height: 500px;
 	background-color: white;
 	margin: 0 auto;
-	opacity: 0.5;
+	opacity: 1.0;
 }
 
 .hidden {

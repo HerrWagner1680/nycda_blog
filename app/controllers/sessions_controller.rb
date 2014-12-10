@@ -20,7 +20,11 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to "/"
+    if request.xhr?
+      render :js => "window.location = '/'"
+    else
+      redirect_to "/"
+    end
   end
 
   private

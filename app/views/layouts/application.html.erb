@@ -14,14 +14,12 @@
 
 <% if current_user %>
 
-<button>CLICK TO CREATE POST</button>
+<button class="create_post">CLICK TO CREATE BLOG POST</button>
 <div class="grayzone hidden">
 	<div class="modal">
-	HELLO!!!!
-	<br>
-	click anywhere on screen to hide modal
-<br>
 
+	<br>
+<h5>other modal info in layouts/application/html.erb</h5>
 <h3>render posts#new </h3>
 <%= render "posts/new" %>
 <h1>CREATE A NEW BLOG POST</h1>
@@ -43,7 +41,7 @@
 </nav>
 </div>
 <%= link_to ("LOGOUT"), "/sessions",method: :delete %>
-<%= link_to ("CREATE A BLOG POST"), "/posts/new",method: :get %>
+<%= link_to ("CREATE A COMMUNITY POST"), "/communities/new",method: :get %>
 <% end %>
 
 
@@ -52,8 +50,10 @@
 
 <script>
 $(function(){
-  $("button").on('click',function(){$(".grayzone").removeClass("hidden")});
-  $(".grayzone").on('click',function(){ $(".grayzone").addClass("hidden")});
+  $(".create_post").on('click',function(){$(".grayzone").removeClass("hidden")});
+  // $(".grayzone").on('click',function(){ $(".grayzone").addClass("hidden")});
+ $(".close").on('click',function(){ $(".grayzone").addClass("hidden")});
+
 });
 </script>
 
