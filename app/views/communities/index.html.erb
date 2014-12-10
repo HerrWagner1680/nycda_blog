@@ -9,7 +9,10 @@
 			<li>
 			<%= community.title %>
 			<%= community.text %>
-			<a href ="#">COMMENT</a>
+			<a href ="#" class="create_comment">COMMENT</a>
+			<div class="comment hidden">
+			<%= render "comments/new" %>
+			</div>
 			</li>
 		<% end %>
 	</ul>

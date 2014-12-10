@@ -7,7 +7,10 @@
 			<li>
 			<%= post.title %>
 			<%= post.text %>
-			<a href ="#">COMMENT</a>
+			<a href ="#" class="create_blog_comment">COMMENT</a>
+			<div class="blog_comment hidden">
+			<%= render "comments/new" %>
+			</div>
 			</li>
 		<% end %>
 	</ul>

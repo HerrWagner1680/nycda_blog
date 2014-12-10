@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     @user = User.all
     @posts = Post.all
     @post = Post.new
+    @comment = Comment.new
   end
 
   def create
