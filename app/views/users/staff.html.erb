@@ -1,14 +1,19 @@
 <h1>STAFF</h1>
-<h3>lists staff currently teaching</h3>
-<h5>file located users/staff.html.erb</h5>
 
 <% if @user %>
 	<ul>
 		<% @user.reverse.each do |staff| %>
 			<li>
-			<%= staff.fname %>
-			<%= staff.lname %>
-			<h3> must be fixed, CURRENTLY LISTING ALL USERS </h3>
+
+				<% if staff.avatar.present? %>
+				<%= image_tag staff.avatar.url(:small) %>
+				<% else %>
+				<h4>Missing Pic</h4>
+				<% end %>
+
+			<h3><%= staff.fname %>
+			<%= staff.lname %></strong> ... LIST SPECIALTY / CLASS TEACHING</h3>
+			<em><%= staff.email %></em>
 			</li>
 		<% end %>
 	</ul>

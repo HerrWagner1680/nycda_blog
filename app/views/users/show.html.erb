@@ -1,24 +1,21 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
 
 <h1>THIS IS THE PROFILE PAGE FOR USER</h1>
 
-<h2> PICTURE </h2>
-
-<%= "#{@user.fname} #{@user.lname}" %>'s Profile
-EMAIL: <%= @user.email %>
 
 <% if @user.avatar.present? %>
-<%= image_tag @user.avatar.url(:thumb) %>
+<%= image_tag @user.avatar.url(:medium) %>
 <% else %>
 <h4>Missing Pic</h4>
 <% end %>
 
-name
-email
-username
-class taking
+<strong><%= @user.staff_or_student.upcase %> </strong>
+<h3><%= "#{@user.fname} #{@user.lname}" %>'s Profile</h3>
+<h4>EMAIL: <%= @user.email %></h4>
 
 
-
-followers
+<h5>username</h5>
+<h5>class taking / teaching</h5>
+<h5>GitHub link</h5>
+<h5>Portfolio link</h5>
+<br>
+<h3>followers</h3>
