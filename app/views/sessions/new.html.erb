@@ -1,9 +1,9 @@
 
 <div class="form">
 <p>Please Login</p>
-<%= form_tag('/sessions', method: "POST") do %>
+  <%= form_tag('/sessions', method: "POST") do %>
   <%= email_field_tag(:email, "",:placeholder => "EMAIL") %>
-  <%= password_field_tag(:password_digest , "", :placeholder => "PASSWORD") %>
+  <%= password_field_tag(:password, "", :placeholder => "PASSWORD") %>
   <%= submit_tag("Login") %>
 <% end %>
 </div>

@@ -122,7 +122,7 @@ border-radius: 10px;
 height: 100%;
 }
 
-.create_post { /*CREATE POST COLOR***********/
+.create_post { /*CREATE POST COLOR***/
 	/*margin-right: 40px;*/
 	position: absolute;
 margin-left: 30%;
@@ -144,9 +144,12 @@ left: 0;
 .modal {
 width: 500px;
 height: 500px;
+padding: 15px;
+padding-left: 30px;
 background-color: white;
 margin: 0 auto;
 opacity: 1.0;
+border-radius: 10px;
 }
 
 .hidden {
@@ -157,6 +160,7 @@ h1 {
 margin: 0px;
 text-align: center;
 }
+
 .form {
 margin-top: 150px;
 width: 300px;
@@ -164,7 +168,14 @@ border-style: inset;
 border-radius: 10px;
 text-align: center;
 margin: auto;
+
 }
+
+/*.form > input { xxxxxxxxxxxxxxlog in css xxxxxxxxxxx
+	height: 40px;
+	line-height: 40px;
+	font-size: 40px;
+}*/
 
 .terms {
 padding: 5px 5px 5px 5px;

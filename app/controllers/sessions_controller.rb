@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   def create
     @user = User.where(email: params[:email]).first
 
-    if @user && @user.password_digest == params[:password_digest]
+    if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       cookies[:user_id] = @user.id
       flash[:notice] = "You are now logged in"
@@ -30,6 +30,6 @@ class SessionsController < ApplicationController
   private
 
   def sessions_params
-    params.require(:user).permit(:email,:password_digest)
+    params.require(:user).permit(:email,:password)
   end
 end
