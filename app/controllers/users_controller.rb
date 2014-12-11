@@ -53,6 +53,9 @@ class UsersController < ApplicationController
     @user.destroy
   end
 
+  def privacy_policy
+  end
+
   def staff
     @staff = User.all.where(staff_or_student: "staff")
     @user = @staff.order(:lname).reverse

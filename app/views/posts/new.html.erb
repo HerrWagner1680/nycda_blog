@@ -3,11 +3,15 @@
 <h1>CREATE A NEW BLOG POST</h1>
 
 <%= form_for new_post do |f| %>
-<%= f.text_field :title, placeholder: "Title Of Post" %>
-<%= f.text_field :text, placeholder: "Enter Blog Post Here ..." %>
+	<div class="title">
+	<%= f.text_field :title, placeholder: "Title Of Post" %>
+	</div>
+
+	<div class="text_field">
+	<%= f.text_area :text, placeholder: "Enter Blog Post Here ..." %>
+	</div>
 <%= f.submit %>
 <% end %>
-
 
 
 

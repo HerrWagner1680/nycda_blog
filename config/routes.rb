@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "/users/contact" => "users#contact"
   get "/users/staff" => "users#staff"
   get "/users/students" => "users#students"
+  get "/users/privacy_policy" => "users#privacy_policy"
+
 
   resources :communities
   resources :comments
