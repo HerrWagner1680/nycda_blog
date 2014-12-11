@@ -1,23 +1,28 @@
 <h1>Posts#index</h1>
 <p>Find me in app/views/posts/index.html.erb</p>
-
 <% if @posts %>
-	<ul>
-		<% @posts.reverse.each do |post| %>
-			<li>
-			<%= post.title %>
-			<%= post.text %>
-			<%= post.id %>
-			<a href ="#" data-id=<%= "#{post.id}"%> class="create_blog_comment">ADD NEW COMMENT</a>
-			<div class="blog_comment hidden">
-			<%= render "comments/new", :community_id => nil ,
-				:post_id => post.id  %>
-			</div>
-			<% x = @comments.where(post_id: post.id) %>
-				<% x.each do |zzz| %>
-				<h5> >>>> <%= zzz.text %> </h5>
-				<% end %>
-			</li>
-		<% end %>
-	</ul>
+<ul>
+<% @posts.reverse.each do |post| %>
+<div class="allposts">
+<li class="post">
+<%= post.title %>
+<%= post.text %>
+<%= post.id %>
+<a href=<%="/users/#{post.user.id}"%>>Post by - <%= post.user.fname%> 
+<%= post.user.lname %></a>
+<a href ="#" data-id=<%= "#{post.id}"%> class="create_blog_comment">ADD NEW COMMENT</a>
+<div class="blog_comment hidden">
+<%= render "comments/new", :community_id => nil ,
+:post_id => post.id  %>
+</div>
+<% x = @comments.where(post_id: post.id) %>
+<% x.each do |zzz| %>
+<h5> >>>> <%= zzz.text %> </h5>
 <% end %>
+</div>
+</li>
+<% end %>
+</ul>
+</div>
+<% end %>
+</div>

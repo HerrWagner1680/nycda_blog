@@ -11,9 +11,11 @@
 				<h4>Missing Pic</h4>
 				<% end %>
 
-			<%= student.fname %>
-			<%= student.lname %>
+			 <a href =<%="/users/#{student.id}"%>>
+			 <%= student.fname %>
+			<%= student.lname %> </a>
 			<h3> CLASS ATTENDING ... goals </h3>
+
 			</li>
 		<% end %>
 	</ul>

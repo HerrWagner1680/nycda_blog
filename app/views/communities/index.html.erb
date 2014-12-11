@@ -1,4 +1,5 @@
 <h1>LIST ALL COMMUNITY POSTS</h1>
+<h4>Community is a forum to help students with any programming problems</h4>
 
 <% if @communities %>
 	<ul>
@@ -6,6 +7,7 @@
 			<li>
 			<h3><%= community.title %></h3>
 			<em><%= community.text %></em>
+			<%= community.user %>
 			<a href ="#" data-id=<%= "#{community.id}"%> class="create_comment">ADD COMMENT</a>
 			<div class="comment hidden">
 			<%= render "comments/new", :community_id => community.id ,
