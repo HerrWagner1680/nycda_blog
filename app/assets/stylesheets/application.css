@@ -275,7 +275,7 @@ padding: 1rem;
   border-radius: 2px;
 }*/
 
-#toggle span {
+#toggle span {  /* sideways MENU text */
 	margin-top: 34px;
 	margin-left: 2px;
 	letter-spacing: 3px;
@@ -283,16 +283,7 @@ padding: 1rem;
 	display:inline-block;
 }
 
-/* on activation */
-/*#toggle.on span {
-  background-color: transparent;
-}*/
-/*#toggle.on span:before {
-  transform: rotate(90deg) translate(5px, 5px);
-}
-#toggle.on span:after {
-  transform: rotate(-90deg) translate(7px, -8px);
-}
+
 */#toggle.on + #menu {
   opacity: 1.0;
 }
@@ -300,15 +291,15 @@ padding: 1rem;
 /* menu appearance*/
 #menu {
   position: relative;
-  color: #999;
+/*  color: #999;*/
   width: 200px;
   padding: 10px;
   margin: auto;
-  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+ font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
   text-align: center;
   border-radius: 4px;
   background: white;
-  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+ /* box-shadow: 0 1px 8px rgba(0,0,0,0.05);*/
   /* just for this demo */
   opacity: 0; 
   transition: opacity .4s;
@@ -319,9 +310,6 @@ padding: 1rem;
   left: 95px;
   content: "";
   display: block;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 20px solid white;
 }
 ul, li, li a {
   list-style: none;
