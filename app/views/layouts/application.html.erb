@@ -11,9 +11,11 @@
     <%= flash[:notice] if flash[:notice] %>
     <%= flash[:alert] if flash[:alert] %>
 
+
      <header>
         <div class="banner">
         </div>
+
         <% if current_user %>
             <!-- <div class="logout"> -->
             <div class="loginout">
@@ -41,11 +43,15 @@
       		<li><a href ="/users/contact#help">HELP</a></li>
       	 </ul>
       </nav> 
+      <% end %>
       <section>
       <%= yield %>
       </section>  
     </main>
 
+
+
+<% if current_user %>
     <footer>
       <span style="font-size: 9px">
         <a href="/users/privacy_policy">TERMS OF USE</a>
@@ -54,10 +60,7 @@
           &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;©2014 AKZ &amp; Video, LLC. All Rights Reserved
       </span>
     </footer>
-
-
 <% end %>
-
 
 
 
