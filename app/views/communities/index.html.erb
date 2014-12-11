@@ -6,8 +6,11 @@
 		<% @communities.reverse.each do |community| %>
 			<li>
 			<h3><%= community.title %></h3>
-			<em><%= community.text %></em>
+			<em><%= community.text %> ........</em>
+
 			<%= community.user.fname %>
+			<%= community.user.lname %>
+			<%= community.user.staff_or_student %>
 			<a href ="#" data-id=<%= "#{community.id}"%> class="create_comment">ADD COMMENT</a>
 			<div class="comment hidden">
 			<%= render "comments/new", :community_id => community.id ,
