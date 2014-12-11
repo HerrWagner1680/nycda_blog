@@ -284,7 +284,7 @@ padding: 1rem;
 }
 
 
-*/#toggle.on + #menu {
+#toggle.on + #menu {
   opacity: 1.0;
 }
 
