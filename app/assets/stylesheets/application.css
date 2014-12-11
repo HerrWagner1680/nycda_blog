@@ -24,6 +24,7 @@ padding-bottom: 4rem;
 min-height: 100%;
 width: 900px;
 margin: 0px auto;
+font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
 }
 .banner {
 width: 100%;
@@ -184,7 +185,7 @@ text-decoration: none;
 }
 footer {
 text-align: center;
-background-color: blue;
+background-color: #369 ;
 height: 5px;
 position: absolute;
 right: 0;
