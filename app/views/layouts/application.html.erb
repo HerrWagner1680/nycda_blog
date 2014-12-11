@@ -8,8 +8,19 @@
   </head>
   <body>
 
-    <%= flash[:notice] if flash[:notice] %>
-    <%= flash[:alert] if flash[:alert] %>
+   <!--  <%= flash[:notice] if flash[:notice] %>
+    <%= flash[:alert] if flash[:alert] %> -->
+
+    <% if flash[:notice] %>
+      <em class="notice">
+        <%= flash[:notice] %>
+      </em>
+    <% end %>
+    <% if flash[:alert] %>
+      <strong class="alert">
+        <%= flash[:alert] %>
+      </strong>
+    <% end %>
 
 
      <header>
