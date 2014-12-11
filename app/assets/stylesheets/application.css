@@ -70,9 +70,9 @@ section {
 */
 margin: 0 auto;
 float: center;
-max-width: 650px;
+max-width: 900px;
 width: 90%;
-padding-left: 200px;
+padding-left: 0px;
 }
 
 section ul li {
@@ -249,7 +249,7 @@ padding: 1rem;
   display: block;
   width: 28px;
   height: 30px;
-  margin: 30px auto 10px;
+  margin: -60px auto 10px; /*moves menu tag*/
 }
 
 #toggle span:after,
