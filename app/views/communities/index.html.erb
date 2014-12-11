@@ -13,6 +13,7 @@
 			<%= community.user.lname %>
 			<%= community.user.staff_or_student %>
 			<br>
+			<br>
 			<a href ="#" data-id=<%= "#{community.id}"%> class="create_comment">ADD COMMENT</a>
 			<div class="comment hidden">
 			<%= render "comments/new", :community_id => community.id ,
