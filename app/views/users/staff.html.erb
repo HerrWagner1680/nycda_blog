@@ -3,6 +3,8 @@
 <% if @user %>
 	<ul>
 		<% @user.reverse.each do |staff| %>
+			<div class="staff_div">
+
 			<li>
 
 				<% if staff.avatar.present? %>
@@ -18,6 +20,7 @@
 			<h3> ... LIST SPECIALTY / CLASS TEACHING</h3>
 
 			</li>
+			</div>
 		<% end %>
 	</ul>
 <% end %>
