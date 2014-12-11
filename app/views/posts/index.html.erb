@@ -1,5 +1,4 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h1>ALL POSTS</h1>
 	<% if @posts %>
 		<ul>
 			<% @posts.reverse.each do |post| %>
@@ -17,7 +16,7 @@
 					</div>
 							<% x = @comments.where(post_id: post.id) %>
 							<% x.each do |zzz| %>
-							<h5> >>>> <%= zzz.text %> </h5>
+							<h5> >>>>>>>>> <%= zzz.text %> </h5>
 						<% end %>
 				</div>
 					</li>

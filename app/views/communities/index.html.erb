@@ -4,6 +4,7 @@
 <% if @communities %>
 	<ul>
 		<% @communities.reverse.each do |community| %>
+		<div class="community_div">
 			<li>
 			<h3><%= community.title %></h3>
 			<em><%= community.text %> ........</em>
@@ -23,6 +24,7 @@
 				<h5> >>>>>>>>>>>>> <%= zzz.text %> </h5>
 				<% end %>
 			</li>
+		</div>
 		<% end %>
 	</ul>
 <% end %>

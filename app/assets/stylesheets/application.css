@@ -199,6 +199,7 @@ padding: 1rem;
   border-style: solid;
   margin: auto 0px;
   text-align: center;
+  margin-top: 20px;
 }
 .allposts ul {
   list-style-type: none;
