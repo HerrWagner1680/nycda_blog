@@ -11,6 +11,7 @@
 			<%= community.user.fname %>
 			<%= community.user.lname %>
 			<%= community.user.staff_or_student %>
+			<br>
 			<a href ="#" data-id=<%= "#{community.id}"%> class="create_comment">ADD COMMENT</a>
 			<div class="comment hidden">
 			<%= render "comments/new", :community_id => community.id ,
@@ -19,7 +20,7 @@
 			<h5> >> see comments below </h5>
 			<% x = @comments.where(community_id: community.id) %>
 				<% x.each do |zzz| %>
-				<h5> >>>> <%= zzz.text %> </h5>
+				<h5> >>>>>>>>>>>>> <%= zzz.text %> </h5>
 				<% end %>
 			</li>
 		<% end %>
