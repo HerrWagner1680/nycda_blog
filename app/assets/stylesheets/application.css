@@ -36,12 +36,19 @@ background-color: grey;
 background-image: url(logo.png);
 background-repeat: none;
 }
+
+.create_community {
+	margin-top: 5px;
+}
+
 .loginout {
 float: right;
+margin-top: 5px;
 }
-.something {
+/*.something {
 float: right;
 }
+*/
 a {
 list-style-type: none;
 text-decoration: none;
@@ -55,6 +62,10 @@ height: 100%;
 }
 button {
 float: right;
+}
+
+.clearfix {
+	margin-top: 10px;
 }
 .clearfix:after {
 display: block;
@@ -111,6 +122,16 @@ border-radius: 10px;
 height: 100%;
 }
 
+.create_post { /*CREATE POST COLOR***********/
+	/*margin-right: 40px;*/
+	position: absolute;
+margin-left: 30%;
+margin-top: -22px;
+  background-color:#369;
+  width: 500px;
+  color: #fff;
+}
+
 .grayzone {
 height: 100%;
 width: 100%;
@@ -144,32 +165,7 @@ border-radius: 10px;
 text-align: center;
 margin: auto;
 }
-.socialmedia{
-width:400px;
-border: 60px #5F5C5A  ;
-border-radius: 50%;
-display: inline-block;
-position: relative;
-top: -20px;
-right: -20px;
-bottom: -20px;
-left: 520px;
-margin: 0 auto;
-padding-top: 150px;
-}
-.socialmedia2 {
-width:400px;
-border: 60px #5F5C5A  ;
-border-radius: 50%;
-display: inline-block;
-position: relative;
-top: -20px;
-right: -20px;
-bottom: -20px;
-left: 0px;
-margin: 0 auto;
-padding-top: 150px;
-}
+
 .terms {
 padding: 5px 5px 5px 5px;
 width: 400px;
@@ -248,8 +244,9 @@ padding: 1rem;
 #toggle {
   display: block;
   width: 28px;
-  height: 30px;
-  margin: -60px auto 10px; /*moves menu tag*/
+  height: 90px;
+/*  margin: -80px auto 10px; *//*moves menu tag*/
+  margin: -70px;
 }
 
 #toggle span:after,
@@ -267,7 +264,7 @@ padding: 1rem;
   display: block;
 }
 
-#toggle span,
+/*#toggle span,
 #toggle span:after,
 #toggle span:before {
   width: 100%;
@@ -276,20 +273,28 @@ padding: 1rem;
   transition: all 0.3s;
   backface-visibility: hidden;
   border-radius: 2px;
+}*/
+
+#toggle span {
+	margin-top: 34px;
+	margin-left: 2px;
+	letter-spacing: 3px;
+	-webkit-transform: rotate(-90deg);
+	display:inline-block;
 }
 
 /* on activation */
-#toggle.on span {
+/*#toggle.on span {
   background-color: transparent;
-}
-#toggle.on span:before {
-  transform: rotate(45deg) translate(5px, 5px);
+}*/
+/*#toggle.on span:before {
+  transform: rotate(90deg) translate(5px, 5px);
 }
 #toggle.on span:after {
-  transform: rotate(-45deg) translate(7px, -8px);
+  transform: rotate(-90deg) translate(7px, -8px);
 }
-#toggle.on + #menu {
-  opacity: 1;
+*/#toggle.on + #menu {
+  opacity: 1.0;
 }
 
 /* menu appearance*/

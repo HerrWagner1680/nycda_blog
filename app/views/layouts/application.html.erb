@@ -33,7 +33,9 @@
               <%= link_to ("LOGOUT"), "/sessions",method: :delete %>
             </div>
             <!-- </div> -->
+            <div class = "create_community">
             <%= link_to ("CREATE A COMMUNITY POST"), "/communities/new",method: :get %>
+            </div>
             <button class="create_post">CLICK TO CREATE BLOG POST</button>
             <div class="grayzone hidden">
               <div class="modal">
@@ -44,7 +46,7 @@
 
     <main class="clearfix">
       <nav>
-      <a href="#menu" id="toggle"><span></span></a>
+      <a href="#menu" id="toggle"><span>MENU</span></a>
       <div id="menu">
          <ul>
       		<li><a href ="/users">HOME</a></li>
