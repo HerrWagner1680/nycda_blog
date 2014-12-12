@@ -1,4 +1,4 @@
-<h1>LIST ALL COMMUNITY POSTS</h1>
+<h1>COMMUNITY POSTS</h1>
 <h4>Community is a forum to help students with any programming problems</h4>
 
 <% if @communities %>
@@ -8,6 +8,7 @@
 			<li>
 			<h3><%= community.title %></h3>
 			<em><%= community.text %> ........</em>
+			<em><%= community.created_at %></em>
 
 			<%= community.user.fname %>
 			<%= community.user.lname %>

@@ -85,6 +85,10 @@ section {
 	padding-left: 0px;
 }
 
+section h4 {
+	text-align: center;
+}
+
 section ul li {
 	word-wrap: break-word;
 	width: 620px;
