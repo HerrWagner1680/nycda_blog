@@ -4,9 +4,9 @@
 			<% @posts.reverse.each do |post| %>
 				<div class="allposts">
 					<li class="post">
-						<%= post.title %>
-						<%= post.text %>
-						<%= post.id %>
+						<p>&nbsp;<%= post.title %></p>
+						<p>&nbsp;<%= post.text %></p>
+						<p>&nbsp;<%= post.id %></p>
 							<a href=<%="/users/#{post.user.id}"%>>Post by - <%= post.user.fname%> 
 							<%= post.user.lname %></a>
 							<a href ="#" data-id=<%= "#{post.id}"%> class="create_blog_comment">ADD NEW COMMENT</a>
