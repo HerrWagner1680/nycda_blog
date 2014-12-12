@@ -7,19 +7,19 @@
 						<p>&nbsp;<%= post.title %></p>
 						<p>&nbsp;<%= post.text %></p>
 						<p>&nbsp;<%= post.id %></p>
-							<a href=<%="/users/#{post.user.id}"%>>Post by - <%= post.user.fname%> 
+						<a href=<%="/users/#{post.user.id}"%>>Post by - <%= post.user.fname%> 
 							<%= post.user.lname %></a>
-							<a href ="#" data-id=<%= "#{post.id}"%> class="create_blog_comment">ADD NEW COMMENT</a>
-					<div class="blog_comment hidden">
+						<a href ="#" data-id=<%= "#{post.id}"%> class="create_blog_comment">ADD NEW COMMENT</a>
+						<div class="blog_comment hidden">
 							<%= render "comments/new", :community_id => nil ,
-												:post_id => post.id  %>
-					</div>
-							<% x = @comments.where(post_id: post.id) %>
-							<% x.each do |zzz| %>
-							<h5> >>>>>>>>> <%= zzz.text %> </h5>
+																				 :post_id => post.id  %>
+						</div>
+						<% x = @comments.where(post_id: post.id) %>
+						<% x.each do |zzz| %>
+						<h5> >>>>>>>>> <%= zzz.text %> </h5>
 						<% end %>
 				</div>
 					</li>
-				<% end %>
+			<% end %>
 		</ul>
-<% end %>
+	<% end %>

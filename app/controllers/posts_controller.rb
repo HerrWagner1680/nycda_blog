@@ -32,13 +32,12 @@ class PostsController < ApplicationController
   end
 
   def update
-      @post = Post.find(params[:id])
+    @post = Post.find(params[:id])
     if @post.update(params[:post])
       flash[:notice] = "Post updated"
     else
       flash[:alert] = "Error Updating Post"
     end
-
     redirect_to "/posts"
   end
 
@@ -52,9 +51,9 @@ class PostsController < ApplicationController
     redirect_to "/posts"
   end
 
-private
+  private
 
-  def post_params
-    params.require(:post).permit(:title, :text)
-  end
+    def post_params
+      params.require(:post).permit(:title, :text)
+    end
 end

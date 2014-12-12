@@ -4,22 +4,20 @@
 	<ul>
 		<% @user.reverse.each do |staff| %>
 			<div class="staff_div">
-
-			<li>
-
-				<% if staff.avatar.present? %>
-				<%= image_tag staff.avatar.url(:small) %>
-				<% else %>
-				<h4>Missing Pic</h4>
-				<% end %>
-
-			 <a href =<%="/users/#{staff.id}"%>>
-			 <%= staff.fname %>
-			<%= staff.lname %> </a>
-			<em> ...... <%= staff.email %></em>
-			<h3> ... LIST SPECIALTY / CLASS TEACHING</h3>
-
-			</li>
+				<li>
+					<% if staff.avatar.present? %>
+						<%= image_tag staff.avatar.url(:small) %>
+					<% else %>
+						<h4>Missing Pic</h4>
+					<% end %>
+			 		
+			 		<a href =<%="/users/#{staff.id}"%>>
+			 			<%= staff.fname %>
+						<%= staff.lname %> 
+					</a>
+					<em> ...... <%= staff.email %></em>
+					<h3> ... LIST SPECIALTY / CLASS TEACHING</h3>
+				</li>
 			</div>
 		<% end %>
 	</ul>
