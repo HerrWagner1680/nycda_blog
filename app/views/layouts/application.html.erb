@@ -78,21 +78,22 @@
 
 
 <script>
-$(function(){
+
+ $(document).ready(function() { 
+
+
   $(".create_post").on('click',function(){$(".grayzone").removeClass("hidden")});
  $(".close").on('click',function(){ $(".grayzone").addClass("hidden")});
-});
 
-$(function(){
+
   $(".create_comment").on('click',function(){
   	event.preventDefault();
   	$(this).parent().children(".comment").removeClass("hidden")});
  $(".close_comment").on('click',function(){ 
  	event.preventDefault();
  	$(".comment").addClass("hidden")});
-});
 
- $(function(){
+
   $(".create_blog_comment").on('click', function(){ 
   	event.preventDefault();
   	$(this).parent().children(".blog_comment").removeClass("hidden"); });
@@ -100,18 +101,10 @@ $(function(){
   $(".close_blog_comment").on('click',function(){ 
   	event.preventDefault();
   	$(".blog_comment").addClass("hidden"); });
- });
 
-$(document).ready(function() { 
-// // $("button").on('click',function(){ $(".grayzone").show()});
-// // $(".grayzone").on('click',function(){ $(".grayzone").hide()});
-// $( "button" ).on('click',function(){ $(".grayzone").toggle( showOrHide );
-// });
+
 
 var theToggle = document.getElementById('toggle');
-
-// based on Todd Motto functions
-// http://toddmotto.com/labs/reusable-js/
 
 // hasClass
 function hasClass(elem, className) {

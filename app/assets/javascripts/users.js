@@ -32,7 +32,7 @@ $(window).bind('keydown', function(event) {
             window.location.href = "/users/staff";
             break;
         case 'l':
-            // event.preventDefault();
+            event.preventDefault();
 
 
 			$.ajax({
@@ -47,9 +47,5 @@ $(window).bind('keydown', function(event) {
         }
     }
 });
-
- // $("button").on('click',function(){ $(".grayzone").show()});
- // $(".grayzone").on('click',function(){ $(".grayzone").hide()});
- // // $( "button" ).on('click',function(){ $(".grayzone").toggle( showOrHide )};
 
 });
