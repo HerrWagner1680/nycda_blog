@@ -91,12 +91,22 @@ section ul li {
 	padding-top: 20px;
 }
 
+section ul .student li a.student_link {
+	width: 784px;
+	padding-left: 15px;
+}
+
+section ul .staff_div li a.staff_link {
+	width: 784px;
+	padding-left: 15px;
+}
+
 nav {
 	height: 300px;
 	position: fixed;
 	float: left;
 	display: inline-block;
-	width: 200px;
+	width: 0px;
 	border-radius: 10px;
 	border-color: red;
 	display: block;

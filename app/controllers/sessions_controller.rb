@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       redirect_to "/users"
     else
       flash[:alert] = ["Incorrect values"]
-      redirect_to "/sessions/new"
+      redirect_to "/"
     end
   end
 

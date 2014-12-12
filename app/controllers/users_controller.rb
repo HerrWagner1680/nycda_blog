@@ -26,11 +26,13 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    current_user
   end
 
   def show
     @user = User.find(params[:id])
     @post = Post.new
+    current_user
   end
 
   def contact

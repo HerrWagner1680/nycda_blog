@@ -1,5 +1,4 @@
-<h1>THIS IS THE PROFILE PAGE FOR USER</h1>
-
+<br>
 <% if @user.avatar.present? %>
   <%= image_tag @user.avatar.url(:medium) %>
 <% else %>
@@ -10,6 +9,9 @@
 <h3><%= "#{@user.fname} #{@user.lname}" %>'s Profile</h3>
 <h4>EMAIL: <%= @user.email %></h4>
 
+<% if session[:user_id] == @user.id %>
+<a href=<%="/users/#{@user.id}/edit" %>>EDIT</a>
+<% end %>
 
 <h5>username</h5>
 <h5>class taking / teaching</h5>
