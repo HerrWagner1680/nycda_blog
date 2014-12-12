@@ -20,135 +20,146 @@
     <% end %>
 
 
-     <header>
-        <div class="banner">
-        </div>
-
-        <% if current_user %>
-            <!-- <div class="logout"> -->
-            <div class="loginout">
-              <%= link_to ("LOGOUT"), "/sessions",method: :delete %>
-            </div>
-            <!-- </div> -->
-            <div class = "create_community">
-            <%= link_to ("CREATE A COMMUNITY POST"), "/communities/new",method: :get %>
-            </div>
-            <button class="create_post">CLICK TO CREATE BLOG POST</button>
-            <div class="grayzone hidden">
-              <div class="modal">
-              <%= render "posts/new" %>
-              </div>
-            </div>
+    <header>
+      <div class="banner">
+      </div>
     </header>
+      
+    <% if current_user %>
+    <!-- <div class="logout"> -->
+      <div class="loginout">
+        <%= link_to ("LOGOUT"), "/sessions",method: :delete %>
+      </div>
+      <!-- </div> -->
+      <div class = "create_community">
+        <%= link_to ("CREATE A COMMUNITY POST"), "/communities/new",method: :get %>
+      </div>
+      <button class="create_post">CLICK TO CREATE BLOG POST</button>
+      <div class="grayzone hidden">
+        <div class="modal">
+          <%= render "posts/new" %>
+        </div>
+      </div>
 
-    <main class="clearfix">
-      <nav>
-      <a href="#menu" id="toggle"><span>MENU</span></a>
-      <div id="menu">
-         <ul>
-      		<li><a href ="/users">HOME</a></li>
-      		<li><a href ="/communities">COMMUNITY</a></li>
-      		<li><a href ="/users/<%= current_user.id %>">PROFILE</a></li>
-      		<li><a href ="/users/contact">CONTACT</a></li>
-      		<li><a href ="/users/students">STUDENTS</a></li>
-      		<li><a href ="/users/staff">STAFF</a></li>
-      		<li><a href ="/users/contact#help">HELP</a></li>
-      	 </ul>
-      	</div>
-      </nav> 
-      <% end %>
+      <main class="clearfix">
+        <nav>
+          <a href="#menu" id="toggle"><span>MENU</span></a>
+          <div id="menu">
+            <ul>
+      		    <li><a href ="/users">HOME</a></li>
+      		    <li><a href ="/communities">COMMUNITY</a></li>
+      		    <li><a href ="/users/<%= current_user.id %>">PROFILE</a></li>
+      		    <li><a href ="/users/contact">CONTACT</a></li>
+      		    <li><a href ="/users/students">STUDENTS</a></li>
+      		    <li><a href ="/users/staff">STAFF</a></li>
+      		    <li><a href ="/users/contact#help">HELP</a></li>
+      	    </ul>
+      	  </div>
+        </nav> 
+      </main>
+
       <section>
-      <%= yield %>
-      </section>  
-    </main>
+        <%= yield %>
+      </section>
+
+    <% else %>
+      <br>
+      <br>
+      <h1> YOU ARE NOT LOGGED IN!!!!!!</h1>
+      <div class="form">
+      <p>Please Login</p>
+      <%= form_tag('/sessions', method: "POST") do %>
+        <%= email_field_tag(:email, "",:placeholder => "EMAIL") %>
+        <%= password_field_tag(:password, "", :placeholder => "PASSWORD") %>
+        <%= submit_tag("Login") %>
+      <% end %>
+    </div> 
+      <br>
+      <br>
+    <% end %>
+    
+    <!-- <div class="form">
+      <p>Please Login</p>
+      <%= form_tag('/sessions', method: "POST") do %>
+        <%= email_field_tag(:email, "",:placeholder => "EMAIL") %>
+        <%= password_field_tag(:password, "", :placeholder => "PASSWORD") %>
+        <%= submit_tag("Login") %>
+      <% end %>
+    </div>  -->
+
+    <% if current_user %>
+      <footer>
+        <span style="font-size: 9px">
+          <a href="/users/privacy_policy">TERMS OF USE</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/users/privacy_policy">PRIVACY POLICY</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;©2014 AKZ &amp; Video, LLC. All Rights Reserved
+        </span>
+      </footer>
+    <% end %>
+
+    <script>
+      $(document).ready(function() { 
+
+        $(".create_post").on('click',function(){$(".grayzone").removeClass("hidden")});
+        $(".close").on('click',function(){ $(".grayzone").addClass("hidden")});
 
 
+        $(".create_comment").on('click',function(){
+  	      event.preventDefault();
+  	    $(this).parent().children(".comment").removeClass("hidden")});
+        $(".close_comment").on('click',function(){ 
+ 	        event.preventDefault();
+ 	      $(".comment").addClass("hidden")});
 
-<% if current_user %>
-    <footer>
-      <span style="font-size: 9px">
-        <a href="/users/privacy_policy">TERMS OF USE</a>
-          &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="/users/privacy_policy">PRIVACY POLICY</a>
-          &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;©2014 AKZ &amp; Video, LLC. All Rights Reserved
-      </span>
-    </footer>
-<% end %>
+        $(".create_blog_comment").on('click', function(){ 
+  	      event.preventDefault();
+  	    $(this).parent().children(".blog_comment").removeClass("hidden"); });
 
+        $(".close_blog_comment").on('click',function(){ 
+  	      event.preventDefault();
+  	    $(".blog_comment").addClass("hidden"); });
 
-
-<script>
-
- $(document).ready(function() { 
-
-
-  $(".create_post").on('click',function(){$(".grayzone").removeClass("hidden")});
- $(".close").on('click',function(){ $(".grayzone").addClass("hidden")});
-
-
-  $(".create_comment").on('click',function(){
-  	event.preventDefault();
-  	$(this).parent().children(".comment").removeClass("hidden")});
- $(".close_comment").on('click',function(){ 
- 	event.preventDefault();
- 	$(".comment").addClass("hidden")});
-
-
-  $(".create_blog_comment").on('click', function(){ 
-  	event.preventDefault();
-  	$(this).parent().children(".blog_comment").removeClass("hidden"); });
-
-  $(".close_blog_comment").on('click',function(){ 
-  	event.preventDefault();
-  	$(".blog_comment").addClass("hidden"); });
-
-
-
-var theToggle = document.getElementById('toggle');
-
-// hasClass
-function hasClass(elem, className) {
-  return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-}
-// addClass
-function addClass(elem, className) {
-    if (!hasClass(elem, className)) {
-      elem.className += ' ' + className;
-    }
-}
-// removeClass
-function removeClass(elem, className) {
-  var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
-  if (hasClass(elem, className)) {
-        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
-            newClass = newClass.replace(' ' + className + ' ', ' ');
+        var theToggle = document.getElementById('toggle');
+        // hasClass
+        function hasClass(elem, className) {
+          return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
         }
-        elem.className = newClass.replace(/^\s+|\s+$/g, '');
-    }
-}
-// toggleClass
-function toggleClass(elem, className) {
-  var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
-    if (hasClass(elem, className)) {
+        // addClass
+        function addClass(elem, className) {
+          if (!hasClass(elem, className)) {
+            elem.className += ' ' + className;
+          }
+        }
+        // removeClass
+        function removeClass(elem, className) {
+          var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+          if (hasClass(elem, className)) {
+          while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+            newClass = newClass.replace(' ' + className + ' ', ' ');
+          }
+          elem.className = newClass.replace(/^\s+|\s+$/g, '');
+          }
+        }
+        // toggleClass
+        function toggleClass(elem, className) {
+        var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
+        if (hasClass(elem, className)) {
         while (newClass.indexOf(" " + className + " ") >= 0 ) {
             newClass = newClass.replace( " " + className + " " , " " );
         }
         elem.className = newClass.replace(/^\s+|\s+$/g, '');
-    } else {
-        elem.className += ' ' + className;
-    }
-}
+        } 
+        else {
+          elem.className += ' ' + className;
+        }
+        }
 
-theToggle.onclick = function() {
-  toggleClass(this, 'on');
-  return false;
-}
-});
-
-</script>
-
-
-
-
-</body>
+        theToggle.onclick = function() {
+          toggleClass(this, 'on');
+          return false;
+        }
+      });
+    </script>
+  </body>
 </html>

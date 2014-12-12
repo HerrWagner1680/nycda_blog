@@ -1,8 +1,7 @@
 
 <h2>EDIT USERS Here!!</h2>
 
-<%= form_for @user,
-			:html => { :multipart => true } do |f| %>
+<%= form_for @user,:html => { :multipart => true } do |f| %>
   <%= f.text_field :fname, placeholder: "First Name" %>
   <%= f.text_field :lname, placeholder: "Last Name" %>
   <br>

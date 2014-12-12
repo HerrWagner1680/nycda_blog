@@ -1,16 +1,15 @@
-
 <h1>CREATE A NEW COMMUNITY POST</h1>
 
 <%= form_for @community do |f| %>
 
-<div class="title">
-<%= f.text_field :title, placeholder: "Title Of Community Post" %>
-</div>
+  <div class="title">
+    <%= f.text_field :title, placeholder: "Title Of Community Post" %>
+  </div>
 
-<div class="text_field">
-<%= f.text_area :text, placeholder: "Enter Community Post Here ...", :cols => 35, :rows => 8, :class => 'text_field' %>
-</div>
+  <div class="text_field">
+    <%= f.text_area :text, placeholder: "Enter Community Post Here ...", :cols => 35, :rows => 8,            :class => 'text_field' %>
+  </div>
 
-<%= f.file_field :avatar %>
-<%= f.submit %>
+  <%= f.file_field :avatar %>
+  <%= f.submit %>
 <% end %>

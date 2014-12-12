@@ -1,5 +1,5 @@
 class CommunitiesController < ApplicationController
- def index
+  def index
     @communities = Community.all
     @comment = Comment.new
     @post = Post.new
@@ -7,7 +7,7 @@ class CommunitiesController < ApplicationController
   end
 
   def create
-      @community = Community.new(community_params)
+    @community = Community.new(community_params)
     if @community.save
       @community.user_id = session[:user_id]
       flash[:notice] = "Post Created"
@@ -38,7 +38,6 @@ class CommunitiesController < ApplicationController
     else
       flash[:alert] = "Error Updating Post"
     end
-
     redirect_to "/posts"
   end
 
@@ -52,10 +51,10 @@ class CommunitiesController < ApplicationController
     redirect_to "/posts"
   end
 
-private
+  private
 
-  def community_params
-    params.require(:community).permit(:title, :text, :user_id)
-  end
+    def community_params
+      params.require(:community).permit(:title, :text, :user_id)
+    end
 end
 

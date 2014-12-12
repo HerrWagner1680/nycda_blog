@@ -3,23 +3,22 @@
 <% if @user %>
 	<ul>
 		<% @user.reverse.each do |student| %>
+			<div class="student">
+				<li>
+					<% if student.avatar.present? %>
+						<%= image_tag student.avatar.url(:thumb) %>
+					<% else %>
+						<h4>Missing Pic</h4>
+					<% end %>
 
-		<div class="student">
-			<li>
+			 		<a href =<%="/users/#{student.id}"%>>
+			 			<%= student.fname %>
+						<%= student.lname %> 
+					</a>
+					<h3> CLASS ATTENDING ... goals </h3>
 
-				<% if student.avatar.present? %>
-				<%= image_tag student.avatar.url(:thumb) %>
-				<% else %>
-				<h4>Missing Pic</h4>
-				<% end %>
-
-			 <a href =<%="/users/#{student.id}"%>>
-			 <%= student.fname %>
-			<%= student.lname %> </a>
-			<h3> CLASS ATTENDING ... goals </h3>
-
-			</li>
-		</div>
+				</li>
+			</div>
 		<% end %>
 	</ul>
 <% end %>
