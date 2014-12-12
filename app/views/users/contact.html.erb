@@ -1,6 +1,17 @@
 <h1>Contact Us</h1>
 
-<p>THIS WILL BE FORM BUT WE NEED TO CONNECT FORM TO CONTROLLERS</p>
+<%= form_for new_post do |f| %>
+	<div class="title">
+  	<%= f.text_field :title, placeholder: "Subject" %>
+	</div>
+
+	<div class="text_field">
+	 <%= f.text_area :text, placeholder: "Enter Message Here ...", :cols => 30, :rows => 5, :class => 'text_field' %>
+	</div>
+   
+  <%= f.submit %>
+<% end %>
+
 
 <h1>FAQs</h1>
 <h4>1. How to use key commands for navigating the site?</h4>

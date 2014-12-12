@@ -5,17 +5,21 @@
 		<% @user.reverse.each do |student| %>
 			<div class="student">
 				<li>
+<!-- <div class="avatar_students"> -->
 					<% if student.avatar.present? %>
-						<%= image_tag student.avatar.url(:thumb) %>
-					<% else %>
-						<h4 class="missing_pic">MISSING PIC</h4>
-					<% end %>
 
+						<%= image_tag student.avatar.url(:thumb) %>
+						<% else %>
+								<h4 class="missing_pic">MISSING PIC</h4>
+						
+						<% end %>
+<!-- </div> -->
+							<h3 class="class_attending"> CLASS ATTENDING</h3>
 			 		<a class="student_link" href =<%="/users/#{student.id}" %>>
 			 			<%= student.fname %>
 						<%= student.lname %> 
 					</a>
-					<h3> CLASS ATTENDING ... goals </h3>
+					<h3> goals </h3>
 
 				</li>
 			</div>

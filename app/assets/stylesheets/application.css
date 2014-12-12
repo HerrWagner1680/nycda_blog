@@ -85,7 +85,23 @@ section {
 	padding-left: 0px;
 }
 
+section .student .avatar_students {
+	display: inline-block;
+}
+
+section ul .student li a.student_link {
+	width: 784px;
+	padding-left: 15px;
+}
+
+section h3.class_attending { /*makes class attend inline with avatar*/
+	display: inline-block;
+	float: right;
+	vertical-align: middle;
+}
+
 section h4.missing_pic {
+	display: inline-block;
 	text-align: left;
 	margin-left: 20px;
 	margin-bottom: 10px;
@@ -94,17 +110,18 @@ section h4.missing_pic {
 section ul li {
 	word-wrap: break-word;
 	width: 620px;
-	padding-top: 20px;
-}
-
-section ul .student li a.student_link {
-	width: 784px;
-	padding-left: 15px;
+/*	padding-top: 20px;*/
 }
 
 section ul .staff_div li a.staff_link {
 	width: 784px;
 	padding-left: 15px;
+}
+
+h4.missing_pic {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin: 0;
 }
 
 nav {
@@ -137,10 +154,6 @@ nav ul li a {
 	height: 100%;
 }
 
-h4.missing_pic {
-	padding: 0;
-	margin: 0;
-}
 
 .create_post { /*CREATE POST COLOR***/
 	/*margin-right: 40px;*/
@@ -150,6 +163,14 @@ h4.missing_pic {
 	background-color:#369;
 	width: 500px;
 	color: #fff;
+}
+
+.loginout > a {
+	background-color: #1aa3a3;
+}
+
+.create_community > a {
+	background-color: #1aa3a3;
 }
 
 .grayzone {
@@ -217,7 +238,7 @@ footer {
 
 .allposts {
 	font-size: 16px;
-	border-radius: 10px;
+	border-radius: 15px;
 	border-style: solid;
 	margin: auto 0px;
 	margin-top: 20px;
@@ -244,11 +265,25 @@ footer {
   background-color: #036;
   width: 772px;
   text-align: center;
+  margin-bottom: 0px;
+}
+
+.allposts .post_by {
+	background-color: #1aa3a3;
 }
 
 .allposts li a:hover {
   color: #fff;
   background-color: #369;
+}
+
+.allposts h3 {
+	text-decoration: underline;
+	margin-left: 20px;
+}
+
+.allposts h5 {
+	margin-left: 25px;
 }
 
 .notice{
