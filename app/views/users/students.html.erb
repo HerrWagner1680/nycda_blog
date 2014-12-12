@@ -8,7 +8,7 @@
 					<% if student.avatar.present? %>
 						<%= image_tag student.avatar.url(:thumb) %>
 					<% else %>
-						<h4>Missing Pic</h4>
+						<h4 class="missing_pic">MISSING PIC</h4>
 					<% end %>
 
 			 		<a class="student_link" href =<%="/users/#{student.id}" %>>
