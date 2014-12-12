@@ -41,26 +41,46 @@
             </div>
     </header>
 
-    <main class="clearfix">
-      <nav>
-      <a href="#menu" id="toggle"><span>MENU</span></a>
-      <div id="menu">
-         <ul>
-      		<li><a href ="/users">HOME</a></li>
-      		<li><a href ="/communities">COMMUNITY</a></li>
-      		<li><a href ="/users/<%= current_user.id %>">PROFILE</a></li>
-      		<li><a href ="/users/contact">CONTACT</a></li>
-      		<li><a href ="/users/students">STUDENTS</a></li>
-      		<li><a href ="/users/staff">STAFF</a></li>
-      		<li><a href ="/users/contact#help">HELP</a></li>
-      	 </ul>
-      	</div>
-      </nav> 
-      <% end %>
-      <section>
-      <%= yield %>
-      </section>  
-    </main>
+  <main class="clearfix">
+	      <nav>
+	      <a href="#menu" id="toggle"><span>MENU</span></a>
+	      <div id="menu">
+	         <ul>
+	      		<li><a href ="/users">HOME</a></li>
+	      		<li><a href ="/communities">COMMUNITY</a></li>
+	      		<li><a href ="/users/<%= current_user.id %>">PROFILE</a></li>
+	      		<li><a href ="/users/contact">CONTACT</a></li>
+	      		<li><a href ="/users/students">STUDENTS</a></li>
+	      		<li><a href ="/users/staff">STAFF</a></li>
+	      		<li><a href ="/users/contact#help">HELP</a></li>
+	      	 </ul>
+	      	</div>
+	      </nav>
+
+			      <% else %>
+			      	<br>
+			      	<br>
+					<h1> YOU ARE NOT LOGGED IN!!!!!!</h1>
+					<br>
+					<br>
+			      <% end %>
+
+			    <% if current_user %>
+			      <section>
+			      <%= yield %>
+			      </section>  
+			    <% else %>
+		
+			<div class="form">
+			<p>Please Login</p>
+			  <%= form_tag('/sessions', method: "POST") do %>
+			  <%= email_field_tag(:email, "",:placeholder => "EMAIL") %>
+			  <%= password_field_tag(:password, "", :placeholder => "PASSWORD") %>
+			  <%= submit_tag("Login") %>
+			<% end %>
+			</div>
+  		<% end %>
+	</main>
 
 
 

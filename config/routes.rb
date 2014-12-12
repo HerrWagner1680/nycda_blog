@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "sessions#new"
+  root "users#index"
 
   get "/users/contact" => "users#contact"
   get "/users/staff" => "users#staff"
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :comments
   resources :posts
   resources :users
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions, only: [:create, :destroy]
 
   delete "/sessions" => "sessions#destroy"
 
