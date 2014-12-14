@@ -1,3 +1,4 @@
+<br>
 <h1>Contact Us</h1>
 
 <%= form_for new_post do |f| %>
@@ -6,13 +7,13 @@
 	</div>
 
 	<div class="text_field">
-	 <%= f.text_area :text, placeholder: "Enter Message Here ...", :cols => 30, :rows => 5, :class => 'text_field' %>
+	 <%= f.text_area :text, placeholder: "Enter Message Here ...", :cols => 30, :rows => 5, :class => 'text_field_message' %>
 	</div>
    
-  <%= f.submit %>
+  <%= f.submit "SEND ADMIN MESSAGE", :class => 'send_admin' %>
 <% end %>
 
-
+<br>
 <h1>FAQs</h1>
 <h4>1. How to use key commands for navigating the site?</h4>
 <h5>1- Control + h = home page <br>
@@ -23,13 +24,9 @@
     6- Control + t = staff list <br>
     7- Control + l = logout
 </h5>
-<h5>2. For furthure questions, please contact admin here: <a href="">Contact</a>
+<h5>2. For further questions, please contact admin here: <a href="">Contact</a>
 </h5>
 
 <h3 id="help"></h3>
-<h3> KEY COMMANDS </h3>
-<h3> FACTS / FAQS</h3>
-<h4> HOW TO NAVIGATE SITES</h4>
-<h5> extra possibility: dropdown on key commands</h5>
-<h4> Other issues ..... contact admin</h4>
+
 

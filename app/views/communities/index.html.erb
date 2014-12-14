@@ -1,5 +1,8 @@
+<br>
+<div class="community_headline">
 <h1>COMMUNITY POSTS</h1>
 <h4>Community is a forum to help students with any programming problems</h4>
+</div>
 
 <% if @communities %>
 	<ul>
@@ -7,23 +10,20 @@
 		<div class="community_div">
 			<li>
 			<h3><%= community.title %></h3>
+			<br>
 			<em><%= community.text %> ........</em>
 			<em><%= community.created_at %></em>
-
-			<%= community.user.fname %>
-			<%= community.user.lname %>
-			<%= community.user.staff_or_student %>
 			<br>
-			<br>
+			<p><%= " posted by: #{community.user.fname} #{community.user.lname} - 
+				 #{community.user.staff_or_student} " %></p>
 			<a href ="#" data-id=<%= "#{community.id}"%> class="create_comment">ADD COMMENT</a>
 			<div class="comment hidden">
 				<%= render "comments/new", :community_id => community.id ,
 											:post_id => nil  %>
 			</div>
-			<h5> >> see comments below </h5>
 			<% x = @comments.where(community_id: community.id) %>
 			<% x.each do |zzz| %>
-			<h5> >>>>>>>>>>>>> <%= zzz.text %> </h5>
+			<h5> >>>>> <%= zzz.text %> </h5>
 			<% end %>
 			</li>
 		</div>

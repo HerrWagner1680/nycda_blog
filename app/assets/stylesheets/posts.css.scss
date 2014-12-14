@@ -1,3 +1,7 @@
+.title {
+  text-align: center;
+}
+
 .title > input {
   width: 90%;
   height: 20px;
@@ -5,16 +9,62 @@
   font-size: 20px;
 }
 
-.text_field {
-  margin-top: 10px;
-  width: 95%;
-  font-size: 20px;
+.post_title {
+  margin-left: -13px;
 }
 
-.text_field > input {
-  height: 400px;
+.post_text_field {
+  height: 330px;
+  margin-top: 10px;
+  width: 90%;
+  font-size: 20px;
+  margin-left: 15px;
+  border: 1px solid #bbb;
+}
+
+.post_button {
+  font-size: 16px;
+  border: 2px solid #bbb;
+  color: #888;
+  height: 25px;
+  background: white;
+  margin-top: 10px;
+  margin-left: 190px;
+
+}
+
+.text_field_message {
+  height: 100px;
+  margin-top: 10px;
+  width: 90%;
+  font-size: 20px;
+  margin-left: 38px;
+
+  border: 1px solid #bbb;
 }
 
 .allposts .post {
   list-style-type: none;
+}
+
+.submit_post {
+  text-align: center;
+}
+
+.submit_post > input{
+  background: #369;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.send_admin {
+  font-size: 16px;
+  border: 2px solid #bbb;
+  color: #888;
+  height: 25px;
+  background: white;
+  margin-top: 10px;
+  margin-left: 38px;
 }

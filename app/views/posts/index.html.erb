@@ -4,8 +4,8 @@
 			<% @posts.reverse.each do |post| %>
 				<div class="allposts">
 					<li class="post">
-						<h3>&nbsp;<%= post.title %></h3>
-						<h5>&nbsp;<%= post.text %></h5>
+						<h3><%= post.title %></h3>
+						<h4>&nbsp;<%= post.text %></h4>
 						<a class="post_by" href=<%="/users/#{post.user.id}"%>>Post by - <%= post.user.fname%> 
 							<%= post.user.lname %></a>
 						<a class="add_comment_post create_blog_comment" href ="#" data-id=<%= "#{post.id}"%>>ADD NEW COMMENT</a>
@@ -15,7 +15,7 @@
 						</div>
 						<% x = @comments.where(post_id: post.id) %>
 						<% x.each do |zzz| %>
-						<h5> >>>>>>>>> <%= zzz.text %> </h5>
+						<h5 class="comment_for_post"> >>>>>>>>> <%= zzz.text %> </h5>
 						<% end %>
 				</div>
 					</li>

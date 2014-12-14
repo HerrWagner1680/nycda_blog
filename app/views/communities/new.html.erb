@@ -1,3 +1,4 @@
+<br>
 <h1>CREATE A NEW COMMUNITY POST</h1>
 
 <%= form_for @community do |f| %>
@@ -7,9 +8,12 @@
   </div>
 
   <div class="text_field">
-    <%= f.text_area :text, placeholder: "Enter Community Post Here ...", :cols => 35, :rows => 8,            :class => 'text_field' %>
+    <%= f.text_area :text, placeholder: "Enter Community Post Here ...", :cols => 35, :rows => 8, :class => 'community_text_field' %>
   </div>
 
-  <%= f.file_field :avatar %>
-  <%= f.submit %>
+<!--   <%= f.file_field :avatar %> -->
+	<div class="submit_post">
+	  <%= f.submit "SUBMIT NEW COMMUNITY POST" %>
+	</div>
+
 <% end %>

@@ -1,17 +1,18 @@
 <button class="close">close window</button>
-
+<br>
+<br>
 <h1>CREATE A NEW BLOG POST</h1>
 
 <%= form_for new_post do |f| %>
 	<div class="title">
-  	<%= f.text_field :title, placeholder: "Title Of Post" %>
+  	<%= f.text_field :title, placeholder: "Title Of Post", :class => 'post_title' %>
 	</div>
 
 	<div class="text_field">
-	 <%= f.text_area :text, placeholder: "Enter Blog Post Here ...", :cols => 40, :rows => 15, :class => 'text_field' %>
+	 <%= f.text_area :text, placeholder: "Enter Blog Post Here ...", :cols => 40, :rows => 15, :class => 'post_text_field' %>
 	</div>
    
-  <%= f.submit %>
+  <%= f.submit :class => 'post_button' %>
 <% end %>
 
 

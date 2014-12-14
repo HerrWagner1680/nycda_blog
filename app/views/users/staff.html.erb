@@ -1,3 +1,4 @@
+<br>
 <h1>STAFF</h1>
 
 <% if @user %>
@@ -8,15 +9,18 @@
 					<% if staff.avatar.present? %>
 						<%= image_tag staff.avatar.url(:small) %>
 					<% else %>
-						<h4>Missing Pic</h4>
+						<span><h3>Missing Pic</h3><span>
 					<% end %>
+						<h3 class="class_teaching">SPECIALTY / CLASS TEACHING</h3>
 			 		
 			 		<a class="staff_link" href =<%="/users/#{staff.id}"%>>
 			 			<%= staff.fname %>
 						<%= staff.lname %> 
 					</a>
-					<em> ...... <%= staff.email %></em>
-					<h3> ... LIST SPECIALTY / CLASS TEACHING</h3>
+					<br>
+					<span><em><%= staff.email %></em></span>
+					<br>
+					<br>
 				</li>
 			</div>
 		<% end %>

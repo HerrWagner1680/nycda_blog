@@ -1,3 +1,11 @@
+.community_headline h4 {
+	text-align: center;
+}
+
+.community_div h4 {
+	text-align: center;
+}
+
 .community_div {
 	list-style-type: none;
 	font-size: 16px;
@@ -5,7 +13,7 @@
   border-width: 1px;
   border-color: black;
   margin-top: 10px;
-  background-color: #bbb;
+  background-color: #ddd;
   padding-left: 15px;
   padding-right: 15px
 }
@@ -14,8 +22,13 @@
 	text-decoration: underline;
 }
 
+.community_div h5 {
+	margin-left: 20px;
+}
+
 .community_div li {
 	width: 770px;
+	display: inline-block;
 }
 
 .community_div li a {
@@ -23,3 +36,11 @@
 	text-align: center;
 }
 
+.community_text_field {
+	font-size: 20px;
+	width: 728px;
+	margin-top: 10px;
+	margin-left: 39px;
+	border: 1px solid #ccc;
+	margin-bottom: 8px;
+}

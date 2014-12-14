@@ -9,6 +9,22 @@
 	margin-top: 20px;
 }
 
+.student li img {
+	border-top-left-radius: 7px;
+}
+
+.student li a {
+	border-radius: 0px;
+	margin-top: -4px;
+	color: #bbb;
+	background-color: #1aa3b1;
+	height: 20px;
+}
+
+.student li a:hover {
+	background-color: #1aa3a3;
+}
+
 .staff_div {
 	list-style-type: none;
 	font-size: 16px;
@@ -19,3 +35,26 @@
 	margin-top: 20px;
 }
 
+.staff_div span h3 {
+	margin-left: 15px;
+}
+
+.staff_div li img {
+	border-top-left-radius: 7px;
+}
+
+.staff_div li a {
+	border-radius: 0px;
+	margin-top: -4px;
+}
+
+span h4 { /* this moves email on profile page to left */
+	text-align: left;
+}
+
+.edit_names > input {
+	height: 20px;
+  margin-top: 10px;
+  font-size: 15px;
+  width: 200px;
+}

@@ -8,8 +8,8 @@ class CommunitiesController < ApplicationController
 
   def create
     @community = Community.new(community_params)
+    @community.user_id = session[:user_id]    
     if @community.save
-      @community.user_id = session[:user_id]
       flash[:notice] = "Post Created"
     else
       flash[:alert] = "ERROR POST NOT CREATED"

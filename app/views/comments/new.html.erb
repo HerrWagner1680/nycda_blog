@@ -4,6 +4,6 @@
 <%= form_for @comment do |f| %>
   <%= f.hidden_field :post_id, value: post_id %>
   <%= f.hidden_field :community_id, value: community_id %>
-  <%= f.text_field :text, placeholder: "Enter Comment Here ..." %>
+  <%= f.text_area :text, placeholder: "Enter New Comment Here ...", :cols => 50, :rows => 3, :class => 'text_field' %>
   <%= f.submit %>
 <% end %>

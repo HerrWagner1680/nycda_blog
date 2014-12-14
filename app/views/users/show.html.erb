@@ -7,7 +7,7 @@
 
 <strong><%= @user.staff_or_student.upcase %> </strong>
 <h3><%= "#{@user.fname} #{@user.lname}" %>'s Profile</h3>
-<h4>EMAIL: <%= @user.email %></h4>
+<span><h4>EMAIL: <%= @user.email %></h4></span>
 
 <% if session[:user_id] == @user.id %>
 <a href=<%="/users/#{@user.id}/edit" %>>EDIT</a>
