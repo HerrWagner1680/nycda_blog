@@ -98,10 +98,11 @@
 
         $(".create_comment").on('click',function(){
   	      event.preventDefault();
-  	    $(this).parent().children(".comment").removeClass("hidden")});
+  	    $(this).parent().children(".comment").removeClass("hidden"); });
+
         $(".close_comment").on('click',function(){ 
- 	        event.preventDefault();
- 	      $(".comment").addClass("hidden")});
+ 	      event.preventDefault();
+ 	    $(".comment").addClass("hidden"); });
 
         $(".create_blog_comment").on('click', function(){ 
   	      event.preventDefault();
