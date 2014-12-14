@@ -1,11 +1,8 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
-
-<h1> THIS IS FOR ADMIN ONLY</h1>
-
-<h3>CREATE STUDENT / STAFF FOR ADMIN ONLY</h3>
+<br>
+<h2>CREATE STUDENT / STAFF - FOR ADMIN ONLY</h2>
 
 <%= form_for @user do |f| %>
+<div class="edit_names">
   <%= f.text_field :fname, placeholder: "First Name" %>
   <%= f.text_field :lname, placeholder: "Last Name" %>
   <br>
@@ -15,5 +12,7 @@
   <%= f.password_field :password, placeholder: "Password" %>
   <%= f.password_field :password_confirmation , placeholder: "Validate Password" %>
   <%= f.file_field :avatar %>
+</div>
+<br>
   <%= f.submit "Create User" %>
 <% end %>

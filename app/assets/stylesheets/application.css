@@ -58,6 +58,7 @@ a {
 	background-color: #369;
 	border-radius: 10px;
 	height: 100%;
+ 	box-shadow: 1px 3px 4px 1px rgba(0,0,0,0.2);
 }
 
 button {
@@ -111,6 +112,10 @@ section h3.class_teaching { /*makes class teaching inline with avatar*/
 section span em {
 	margin-left: 25px;
 	letter-spacing: 2px;
+}
+
+section img {
+	margin-right: 10px;
 }
 
 section h4.missing_pic {
@@ -167,7 +172,6 @@ nav ul li a {
 	height: 100%;
 }
 
-
 .create_post { 
 	position: absolute;
 	margin-left: 30%;
@@ -177,6 +181,7 @@ nav ul li a {
 	height: 24px;
 	color: #fff;
 	cursor: pointer;
+	letter-spacing: 3px;
 }
 
 .loginout > a {
@@ -222,13 +227,16 @@ h1 {
 	text-align: center;
 }
 
-.form {
-	margin-top: 150px;
-	width: 300px;
-	border-style: inset;
-	border-radius: 10px;
-	text-align: center;
+.form { 
 	margin: auto;
+	margin-top: 30px;
+	width: 500px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+/*	border-style: inset;*/
+	border-radius: 10px;
+	background: #2c7c8d;
+
 }
 
 .terms {
@@ -248,14 +256,18 @@ h1 {
 
 footer {
 	text-align: center;
-	background-color: #369 ;
+	background-color: #369;
 	height: 5px;
 	position: absolute;
 	right: 0;
 	left: 0;
 	bottom: 0;
-	padding: 1rem;
+	padding: 1em;
 	z-index: -5;
+}
+
+h3 {
+	margin: 0px;
 }
 
 .allposts {
@@ -308,7 +320,18 @@ footer {
 
 .allposts h3 {
 	text-decoration: underline;
-	margin-left: 20px;
+	display: block;
+	border-top: 15px solid #369;
+	border-right: 30px solid #369;
+	border-left: 30px solid #369;
+	border-bottom: 20px solid #369;
+	width: 744px;
+	background: #369;
+	color: white;
+	text-shadow: 0px 0px 3px #000;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	letter-spacing: 1px;
 }
 
 .allposts h4 {
@@ -331,7 +354,6 @@ footer {
   border-radius: 3px;
 }
 
-
 /* Important styles */
 #toggle {
   display: block;
@@ -339,6 +361,7 @@ footer {
   height: 90px;
 /*  margin: moves menu tag*/
   margin: -70px;
+  box-shadow: 3px 3px 5px 1px rgba(0,0,0,0.2);
 }
 
 #toggle span:after,
@@ -349,16 +372,8 @@ footer {
   top: -9px;
 }
 
-#toggle span:after{
-  top: 9px;
-}
-
-#toggle span {
-  position: relative;
-  display: block;
-}
-
 #toggle span {  /* sideways MENU text */
+  position: relative;
 	margin-top: 34px;
 	margin-left: 2px;
 	letter-spacing: 3px;
@@ -380,8 +395,9 @@ footer {
 	font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
   text-align: center;
   border-radius: 4px;
-  background: white;
+  background: #f8fcff;
 	display:none; /* makes menu disappear */
+  box-shadow: 15px 5px 20px 10px rgba(0,0,0,0.2);
 }
 
 #menu:after {

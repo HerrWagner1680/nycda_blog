@@ -65,13 +65,12 @@
     <% else %>
       <br>
       <br>
-      <h1> YOU ARE NOT LOGGED IN!!!!!!</h1>
+      <h1>PLEASE LOGIN</h1>
       <div class="form">
-      <p>Please Login</p>
       <%= form_tag('/sessions', method: "POST") do %>
-        <%= email_field_tag(:email, "",:placeholder => "EMAIL") %>
-        <%= password_field_tag(:password, "", :placeholder => "PASSWORD") %>
-        <%= submit_tag("Login") %>
+        <%= email_field_tag(:email, "",:placeholder => "EMAIL", :class => 'login_email') %>
+        <%= password_field_tag(:password, "", :placeholder => "PASSWORD", :class => 'login_password') %>
+        <%= submit_tag("LOGIN", :class => 'login_button') %>
       <% end %>
     </div> 
       <br>

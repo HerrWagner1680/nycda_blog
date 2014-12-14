@@ -1,3 +1,48 @@
+.login_email {
+	font-size: 25px;
+	width: 300px;
+	display: block;
+	margin: 0 auto;
+	background: #ecf6f8;
+	padding-left: 6px;
+	letter-spacing: 2px;
+}
+
+.login_email:focus {
+	border: 2px solid #333;
+	outline: none;
+}
+
+.login_password {
+	font-size: 25px;
+	width: 300px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 15px;
+	background: #ecf6f8;
+	padding-left: 6px;
+	letter-spacing: 2px;
+}
+
+.login_password:focus {
+	border: 2px solid #333;
+	outline: none;
+}
+
+.login_button {
+	font-size: 25px;
+	width: 304px;
+	background: #1aa3a3;
+	border: 2px solid #ecf6f8;
+	display: block;
+	margin: 0 auto;
+	margin-top: 15px;
+}
+
+.login_button:focus {
+	border: 2px solid #333;
+	outline: none;
+}
 
 .student {
 	list-style-type: none;
@@ -17,12 +62,19 @@
 	border-radius: 0px;
 	margin-top: -4px;
 	color: #bbb;
-	background-color: #1aa3b1;
+	background-color: #2c7c8d;
 	height: 20px;
 }
 
 .student li a:hover {
 	background-color: #1aa3a3;
+}
+
+.student h3 {
+	margin-left: 10px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	color: #333;
 }
 
 .staff_div {
@@ -57,4 +109,9 @@ span h4 { /* this moves email on profile page to left */
   margin-top: 10px;
   font-size: 15px;
   width: 200px;
+}
+
+.edit_names > input:focus {
+	border: 2px solid #333;
+	outline: none;
 }

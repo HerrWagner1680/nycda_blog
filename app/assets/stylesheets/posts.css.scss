@@ -9,8 +9,18 @@
   font-size: 20px;
 }
 
+.title > input:focus {
+  border: 2px solid #333;
+  outline: none;
+}
+
 .post_title {
   margin-left: -13px;
+}
+
+.post_title:focus {
+  border: 2px solid #333;
+  outline: none;
 }
 
 .post_text_field {
@@ -22,6 +32,11 @@
   border: 1px solid #bbb;
 }
 
+.post_text_field:focus {
+  border: 1px solid #333;
+  outline: none;
+}
+
 .post_button {
   font-size: 16px;
   border: 2px solid #bbb;
@@ -30,7 +45,6 @@
   background: white;
   margin-top: 10px;
   margin-left: 190px;
-
 }
 
 .text_field_message {
@@ -47,12 +61,18 @@
   list-style-type: none;
 }
 
+.comment_for_post span {
+  color: gray;
+  margin-left: 10px;
+  font-style: italic;
+}
+
 .submit_post {
   text-align: center;
 }
 
 .submit_post > input{
-  background: #369;
+  background: #2c7c8d;
   color: white;
   font-size: 20px;
   letter-spacing: 2px;

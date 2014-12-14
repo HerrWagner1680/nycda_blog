@@ -23,7 +23,8 @@
 			</div>
 			<% x = @comments.where(community_id: community.id) %>
 			<% x.each do |zzz| %>
-			<h5> >>>>> <%= zzz.text %> </h5>
+			<h5> >>>>> <%= zzz.text %> <span> <%= zzz.user.fname %>
+			<%= zzz.user.lname %> - <%= zzz.user.staff_or_student.upcase %> ... <%= zzz.created_at %></span></h5>
 			<% end %>
 			</li>
 		</div>

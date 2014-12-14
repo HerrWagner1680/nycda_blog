@@ -40,7 +40,7 @@ $(window).bind('keydown', function(event) {
 			  url: "/sessions",
 			})
 			  .complete(function( ) {
-			    alert( "Successfully Logged Out" );
+			    // alert( "Successfully Logged Out" );
 			  });
 			  break;
 			 
