@@ -37,6 +37,10 @@ ActiveRecord::Schema.define(version: 20141215044402) do
     t.datetime "updated_at"
   end
 
+  add_index "followers", ["follower_id", "leader_id"], name: "index_followers_on_follower_id_and_leader_id", unique: true
+  add_index "followers", ["follower_id"], name: "index_followers_on_follower_id"
+  add_index "followers", ["leader_id"], name: "index_followers_on_leader_id"
+
   create_table "posts", force: true do |t|
     t.integer  "user_id"
     t.string   "text"

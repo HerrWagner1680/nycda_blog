@@ -77,6 +77,19 @@
 	color: #333;
 }
 
+.student h4 {
+	margin-left: 15px;
+}
+
+.student .student_goal {
+	margin-bottom: 0px;
+}
+
+.student .student_h4_goal {
+	margin-left: 17px;
+	margin-top: 7px;
+}
+
 .staff_div {
 	list-style-type: none;
 	font-size: 16px;
@@ -100,6 +113,14 @@
 .staff_div li a {
 	border-radius: 0px;
 	margin-top: -4px;
+}
+
+.staff_div .achievements {
+	margin-left: 10px;
+}
+
+.staff_div h5 {
+	margin-left: 40px;
 }
 
 span h4 { /* this moves email on profile page to left */
