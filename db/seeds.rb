@@ -8,8 +8,8 @@
 
 
 user_list = [
-	[ id: 20, fname: "jimmy", lname: "jimmy", email: "jimmy@jimmy.com", password: "jimmy", goals: nil, location: nil, user_name: nil, created_at: "2014-12-11 21:53:33", updated_at: "2014-12-12 21:56:33", avatar_file_name: "avatar.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 2054, avatar_updated_at: "2014-12-12 21:56:32", staff_or_student: "student"]
-	[ id: 2, fname: "John", lname: "John", email: "john@john.com", password: "john", goals: nil, location: nil, user_name: nil, created_at: "2014-12-08 16:33:58", updated_at: "2014-12-11 15:44:17", avatar_file_name: "avatar.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 2054, avatar_updated_at: "2014-12-11 15:28:48", staff_or_student: "student"]
+	[ id: 20, fname: "jimmy", lname: "jimmy", email: "jimmy@jimmy.com", password: "jimmy", goals: nil, location: nil, user_name: nil, created_at: "2014-12-11 21:53:33", updated_at: "2014-12-12 21:56:33", avatar_file_name: "avatar.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 2054, avatar_updated_at: "2014-12-12 21:56:32", staff_or_student: "student"],
+	[ id: 2, fname: "John", lname: "John", email: "john@john.com", password: "john", goals: nil, location: nil, user_name: nil, created_at: "2014-12-08 16:33:58", updated_at: "2014-12-11 15:44:17", avatar_file_name: "avatar.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 2054, avatar_updated_at: "2014-12-11 15:28:48", staff_or_student: "student"],
 	[ id: 4, fname: "Jim", lname: "Jim", email: "jim@jim.com", password: "jim", goals: nil, location: nil, user_name: nil, created_at: "2014-12-08 19:11:36", updated_at: "2014-12-11 15:44:34", avatar_file_name: "avatar.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 2054, avatar_updated_at: "2014-12-11 15:33:14", staff_or_student: "student"]
 
 ]
