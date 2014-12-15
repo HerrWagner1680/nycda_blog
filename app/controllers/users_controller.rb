@@ -5,6 +5,9 @@ class UsersController < ApplicationController
     @post = Post.new
     @comment = Comment.new
     @comments = Comment.all
+    if @current_user
+       @leaders = @current_user.leaders
+    end
   end
 
   def create
@@ -33,6 +36,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @post = Post.new
     current_user
+    if @current_user
+      @followerlink = Follower.where(leader_id: @user.id,
+                                   follower_id: @current_user.id).first
+    end
   end
 
   def contact
@@ -73,5 +80,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email,:password,:fname,:lname, :avatar, :staff_or_student)
   end
-
 end

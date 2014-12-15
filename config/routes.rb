@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   root "users#index"
 
   get "/users/contact" => "users#contact"
@@ -7,7 +6,7 @@ Rails.application.routes.draw do
   get "/users/students" => "users#students"
   get "/users/privacy_policy" => "users#privacy_policy"
 
-
+  resources :followers, only: [:create, :destroy]
   resources :communities
   resources :comments
   resources :posts

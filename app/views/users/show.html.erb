@@ -1,3 +1,5 @@
+<h3 class="profile_name"><%= "#{@user.fname} #{@user.lname}" %>'s Profile</h3>
+
 <br>
 <% if @user.avatar.present? %>
   <%= image_tag @user.avatar.url(:medium) %>
@@ -5,17 +7,45 @@
   <h4>Missing Pic</h4>
 <% end %>
 
-<strong><%= @user.staff_or_student.upcase %> </strong>
-<h3><%= "#{@user.fname} #{@user.lname}" %>'s Profile</h3>
+<strong><%= @user.staff_or_student %> </strong>
+
+<% if @current_user && @user.id != @current_user.id %>
+  <% if !@followerlink %>
+  <form action="/followers" method="POST">
+    <input type="hidden"
+           name="authenticity_token"
+           value="<%= form_authenticity_token %>">
+    <input type="hidden"
+           name="leader_id"
+           value=<%= @user.id %>>
+    <input type="submit" value="Follow" class="followlink">
+  </form>
+  <% else %>
+  <div class="followlink">
+  <%= link_to(
+          ("Unfollow"),
+          "/followers/#{ @followerlink.id }",
+          method: :delete ) %>
+  </div>
+  <% end %>
+<% end %>
+
+
+<div class="follower">
+<%= @user.followers.count %>
+<%= @user.leaders.count %>
+</div>
+<div class="followers"><h3>Followers</h3>&nbsp;<h3>Following</h3>
+</div>
+
+
 <span><h4>EMAIL: <%= @user.email %></h4></span>
 
 <% if session[:user_id] == @user.id %>
 <a href=<%="/users/#{@user.id}/edit" %>>EDIT</a>
 <% end %>
 
-<h5>username</h5>
-<h5>class taking / teaching</h5>
-<h5>GitHub link</h5>
-<h5>Portfolio link</h5>
-<br>
-<h3>followers</h3>
+
+
+
+

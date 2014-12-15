@@ -16,7 +16,7 @@
 						<% x = @comments.where(post_id: post.id) %>
 						<% x.each do |zzz| %>
 						<h5 class="comment_for_post"> >>>>>>>>> <%= zzz.text %> <span> 
-						<%= zzz.user.fname %> <%= zzz.user.lname %> - <%= zzz.user.staff_or_student.upcase %></span> </h5>
+						<%= zzz.user.fname %> <%= zzz.user.lname %> - <%= zzz.user.staff_or_student %></span> </h5>
 						<% end %>
 				</div>
 					</li>

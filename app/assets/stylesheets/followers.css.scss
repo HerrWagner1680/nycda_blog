@@ -1,0 +1,38 @@
+// Place all the styles related to the Followers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.follower {
+  word-spacing: 4em;
+  width: 200px;
+  margin: 0px;
+}
+.followers h3 {
+  font-size: 12px;
+  display: inline-block;
+  word-spacing: 5em;
+}
+.followlink   {
+  font-size: 12px;
+  width: 50px;
+  border-style: solid;
+  border-radius: 8px;
+  background-color: blue;
+  color: white;
+  margin-bottom: 15px;
+}
+.profile_name {
+  margin-top: 45px;
+}
+.followlink a  {
+  width: 45px;
+  border-style: solid;
+  border-radius: 8px;
+  background-color: blue;
+  color: white;
+}
+strong{
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
