@@ -11,7 +11,7 @@
 						<a class="add_comment_post create_blog_comment" href ="#" data-id=<%= "#{post.id}"%>>ADD NEW COMMENT</a>
 						<div class="blog_comment hidden">
 							<%= render "comments/new", :community_id => nil ,
-																				 :post_id => post.id  %>
+														:post_id => post.id  %>
 						</div>
 						<% x = @comments.where(post_id: post.id) %>
 						<% x.each do |zzz| %>

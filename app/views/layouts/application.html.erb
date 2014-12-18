@@ -101,7 +101,7 @@
 
         $(".close_comment").on('click',function(){ 
  	      event.preventDefault();
- 	    $(".comment").addClass("hidden"); });
+ 	      $(".comment").addClass("hidden"); });
 
         $(".create_blog_comment").on('click', function(){ 
   	      event.preventDefault();
@@ -109,7 +109,12 @@
 
         $(".close_blog_comment").on('click',function(){ 
   	      event.preventDefault();
-  	    $(".blog_comment").addClass("hidden"); });
+  	    $(".blog_comment").addClass("hidden");
+         location.reload(); });
+
+        $(".new_comment_button").on('click',function(){ 
+         location.reload("hidden");
+          });
 
         var theToggle = document.getElementById('toggle');
         // hasClass
