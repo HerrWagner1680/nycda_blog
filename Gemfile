@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "passenger"
+# gem "passenger"
 
 gem "paperclip"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
